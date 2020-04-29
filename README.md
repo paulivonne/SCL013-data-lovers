@@ -17,7 +17,7 @@ El proceso de diseño consistió en realizar una investigación sobre la identid
 
 ### Alta fidelidad inicial
 
-![imgaltaini](http://imgfz.com/i/CWIzqvN.png)
+![imgaltaini](http://imgfz.com/i/OEpMX6b.png)
 
 ### Alta fidelidad
 
