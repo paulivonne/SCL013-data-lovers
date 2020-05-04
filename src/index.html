@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Pokekanto Prueba</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="padre">
+		<div class="screen1">
+		
+
+			<div class="imgcontainer"><img src="http://imgfz.com/i/Qx4S3dq.png" alt=""></div>
+      <div class="textcontainer1">
+				<h1 id="title1">Bienvenid@s a</h1>
+        <h1 id="title2">POKEKANTO</h1>
+        <p id="text1">Aquí podrás encontrar la información sobre tus pokémon de la región de Kanto para jugar en Pokemón Go y ser el mejor!</p>
+        <h1 id="question">ELIGE UNA CATEGORÍA</h1>
+        <div class="categories">
+          <div class="category1">
+            <div class="icon" id="icon1">
+              <img src="http://imgfz.com/i/vTjmB4F.png">
+            </div>
+            <div class="texticon">POKÉDEX</div>
+          </div><!--categoria1-->
+          <div class="category1">
+            <div class="icon" id="icon2">
+              <img src="http://imgfz.com/i/X1k4HjM.png">
+            </div>
+            <div class="texticon">ESTADÍSTICAS</div>
+            </div> <!--categoria1-->
+          <div class="category1">
+            <div class="icon" id="icon3">
+              <img src="http://imgfz.com/i/YC1aqLf.png">
+            </div>
+            <div class="texticon">CRIANZA</div>
+          </div><!--categoria1-->
+        </div>
+			</div>
+
+		</div><!--pantalla1-->
+		<section class="section1">
+      	<header class="header">
+					<!--	<a href="#"><span class="off">inicio</span></a>-->
+
+				<a href='#' class="menu">inicio</a>
+        <a href='#' class="menu">pokedex</a>
+        <a href='#' class="menu">estadísticas</a>
+        <a href='#' class="menu">crianza</a>
+				<!--<a href='#' class="searcher">buscador</a>-->
+       <div id="searcher">
+      <input type="text" placeholder="Buscar Pokémon" >
+     <i class="fas fa-search"></i>
+    
+    </div>
+			</header>
+			<div class="textcontainer2">
+				<h1 id="title3">POKÉDEX</h1>
+				<p id="text2">Si quieres ser el mejor entrenador:<br>
+Selecciona, filtra y descubre las principales características de tu pokémon.</p>
+			</div>
+			<div class="filters">
+				<div class="filter">TIPO</div>
+				<div class="filter">ORDENAR</div>
+			</div><!--filters-->
+      	<div class="pokecontainer">
+				<div class="poke"></div>
+				<div class="poke"></div>
+			</div><!--pokecontainer-->
+		</section>
+		<footer class="footer">
+			<nav class="pie"></nav>
+		</footer>
+	</div>
+</body>
 </html>
