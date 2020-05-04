@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .fondo {
+      background-image: url("http://imgfz.com/i/gGas3qQ.png")
+  }*{
+	margin:0px;
+	padding: 10px;
+	box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.padre{
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+ /*screen1*/
+	.screen1{
+		background:url(http://imgfz.com/i/lQEs3Vq.png);
+    display: flex;
+    background-position: center;
+    background-attachment: contain;
+	  background-size: cover;
+    height:600px;
+    justify-content:space-between;
+		
+  
+	}
+		.imgcontainer{
+      /*background: url(http://imgfz.com/i/Qx4S3dq.png);*/
+      background:white;
+      width:50%;
+		}
+
+  .imgcontainer img{
+      /*background: url(http://imgfz.com/i/Qx4S3dq.png);*/
+width: 90%;		
+}
+
+
+		.textcontainer1{
+			/*background: #f07b3f;*/
+      color:white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width:50%;
+      padding: 3%;
+  
+		}
+
+    #title1{
+      font-size: 20px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    #title2{
+      font-size: 45px;
+      font-weight: 900;
+    }
+
+     #text1{
+      font-size: 16px;
+      font-weight: normal;
+      width: 92%;
+
+    }
+
+     #question{
+      font-size: 18px;
+      font-weight: bold;
+
+    }
+
+     	.categories {
+			/*background: #ffd460;*/
+			}
+	    .category1 {
+				background: #856c8b;
+        display: flex;
+        flex:1 1 auto;
+        align-items: center;
+        justify-content: flex-start;
+			}
+      
+     .icon{
+       background: #ffd460;
+       height: 10;
+       /*width: 10%;
+       display:flex;*/
+       margin: 0px;
+
+
+            
+      }
+      #icon1{
+
+      }
+          
+        #icon1 img:hover {
+        background-image: url ("http://imgfz.com/i/ONIWMy9.png");     
+        }
+
+      #icon2{
+      }
+
+      #icon3{
+   
+      }
+      
+    .texticon {
+      color: white;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4%;
+    }
+
+    
+ /*Pantalla2*/
+	.section1{
+		background: linear-gradient(360deg, #25BF88 0%, #0097A5 70.31%);
+		display: flex;
+    flex-direction:column;
+    color:white;
+    height:600px;
+
+	}
+
+  .header{
+      /*background:#f07b3f;*/
+			display: flex;
+			flex-flow: row nowrap;
+			height: 70px;
+      align-items:center;
+      margin:20px;
+		}
+
+    .header a{
+      text-transform: uppercase;
+    }
+
+    a:hover{
+	  color: rgba(190,250,225,1);
+    }
+    
+
+    .menu{
+      /*background:black;*/
+      margin: 4%;
+      font-size:13px;
+
+    }
+
+    #searcher{
+    flex:0 0 auto;
+    margin:5px;
+
+    }
+    #searcher input{
+    border-radius:15px;
+    background: rgba(255, 255, 255, 0.238);
+    } 
+
+
+
+		.textcontainer2{
+			/*background: #35495e;*/
+			display: flex;
+			flex-flow: row wrap;
+      flex-direction: column;
+      margin:0 20px;
+
+		}
+
+    #title3{
+      font-size:27px;
+    }
+
+    #text2{
+      font-size:15px;
+    }
+			.navigation{
+				background: #70a3c4;
+				flex:1 1 100%;
+			}
+		.filters{
+			/*background: #e8c9eb;*/
+      display:flex;
+      width: 30%; 
+      margin:0 20px;
+		}
+    .filter{
+      background: #48c8cc;
+      display:flex;
+      flex:1 1 100%;
+      margin: 5%;
+      justify-content: space-around;
+    }
+
+    .pokecontainer{
+			background: #9a819c;
+      display:flex;
+			flex:1 1 auto;
+      margin:0 20px;
+		}
+			.poke{
+				background: #ffea85;
+			}
+	.footer{
+		background: black;
+		display: flex;
+		justify-content: center;
+	}
+		.pie{
+			background: #e6af2e;
+			width: 300px;
+		}
+@media all and (max-width: 800px){
+	.section{
+		flex-direction: column;
+	}
+	.menu{
+		flex-direction: column;
+		height: auto;
+	}
+	.aside{
+		display: flex;
+		justify-content: center;
+	}
+}
+@media all and (max-width: 600px){
+	.articulos{
+		flex-direction: column;
+	}
+}
+@media all and (max-width: 400px){
+	.aside{
+		flex-direction: column;
+	}
+}
+
+@media all and (max-width: 600px){
+	.imgcontainer{
+   
+}
+}
