@@ -1,6 +1,2 @@
-//import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-const pokemondata = data.pokemon;
-console.log(pokemondata[3].egg);
+import data from './../data/pokemon/pokemon.js';
+import { filterData } from './../data.js';
