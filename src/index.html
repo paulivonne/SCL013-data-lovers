@@ -16,7 +16,7 @@
       <div class="textContainer1">
 				<h1 id="title1">Bienvenid@s a</h1>
         <h1 id="title2">POKEKANTO</h1>
-        <p id="text1">Aquí podrás encontrar la información sobre tus pokémon de<br>la región de Kanto para jugar en Pokemón Go y ser el mejor!</p>
+        <p id="text1">Aquí podrás encontrar la información sobre tus pokémon de la región de Kanto para jugar en Pokemón Go y ser el mejor!</p>
         <h1 id="title3">ELIGE UNA CATEGORÍA</h1>
 
         <div class="categories">
@@ -43,7 +43,7 @@
           </div><!--category1-->
 
         </div><!--categories-->
-      </div>
+      </div><!--textContainer1-->
    
     </section><!--pantalla1-->
     
@@ -65,44 +65,39 @@
 			</header>
 			<div class="textContainer2">
 				<h1 id="title4">POKÉDEX</h1>
-				<p id="text2">Si quieres ser el mejor entrenador:<br>
+				<p id="text2">Si quieres ser el mejor entrenador:
 Selecciona, filtra y descubre las principales características de tu pokémon.</p>
       </div>
       <div class="fatherFilters">
 
 			<div class="containerFilters">
         <select class="filter" name="" id="filterType">
-          <option value="Tipo">Tipo</option>
+          <option selected disabled>Tipo</option>
           <option value="Todos">Todos</option>
-          <option value="Acero">Acero</option>
-          <option value="Agua">Agua</option>
-          <option value="Bicho">Bicho</option>
-          <option value="Dragón">Dragón</option>
-          <option value="Eléctrico">Eléctrico</option>
-          <option value="Fantasma">Fantasma</option>
-          <option value="Fuego">Fuego</option>
-          <option value="Hada">Hada</option>
-          <option value="Hielo">Hielo</option>
-          <option value="Lucha">Lucha</option>
+          <option value="Water">Agua</option>
+          <option value="Bug">Bicho</option>
+          <option value="Dragon">Dragón</option>
+          <option value="Electric">Eléctrico</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Fire">Fuego</option>
+          <option value="Ice">Hielo</option>
+          <option value="Fighting">Lucha</option>
           <option value="Normal">Normal</option>
-          <option value="Planta">Planta</option>
-          <option value="Psíquico">Psíquico</option>
-          <option value="Roca">Roca</option>
-          <option value="Siniestro">Siniestro</option>
-          <option value="Tierra">Tierra</option>
-          <option value="Veneno">Veneno</option>
-          <option value="Volador">Volador</option>
+          <option value="Grass">Planta</option>
+          <option value="Psychic">Psíquico</option>
+          <option value="Rock">Roca</option>
+          <option value="Ground">Tierra</option>
+          <option value="Poison">Veneno</option>
+          <option value="Flying">Volador</option>
           
       </select> 
       </div><!--containerFilters-->
 
       <div class="containerFilters">
         <select class="filter" name="" id="filterOrder">
-          <option value="Tipo">Ordenar</option>
-          <option value="Todos">Nº Ascendente</option>
-          <option value="Acero">Nº Descendente</option>
-          <option value="Agua">A-Z</option>
-          <option value="Bicho">Z-A</option>
+          <option value="upward">Ordenar</option>
+          <option value="upward">Nº Ascendente</option>
+          <option value="falling">Nº Descendente</option>
         
 
           
@@ -115,11 +110,13 @@ Selecciona, filtra y descubre las principales características de tu pokémon.</
 
       	<div class="pokedexContainer">
 			
-    <!--trae del js a html contenedor raiz/ imprimir pokedex-->
-    <div id="root"></div>
+    <!--trae del js a html contenedor raiz/ imprimir pokedex
+    <div id="root"></div>-->
+    
 
     </div><!--pokedexcontainer-->
     </section>
+    <div id="root"></div>
 
 		<footer class="footer">
 		  <nav class="foot">Redes Sociales</nav>

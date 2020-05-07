@@ -44,7 +44,7 @@ a{
         flex-flow: column wrap;
         justify-content: center;
         width:50%;
-        padding: 3%;
+        padding:3% ;
       }
  
       #title1{/*bienvenidos*/
@@ -284,8 +284,6 @@ a{
         display:flex;
         flex-wrap: wrap;
         justify-content: center;
-
-       
 		  }
 
       /* display: flex;
@@ -297,9 +295,9 @@ a{
       #root{
         display: flex;
         justify-content:space-evenly;
-        flex-wrap:wrap;
-        /*margin:120px 0;*/
-        width:80%;
+        flex-wrap:wrap; 
+        /*width:80%;*/
+        justify-content: center;
         }
 
 
@@ -308,7 +306,6 @@ a{
         height: 170px; 
         box-sizing: border-box;
         border-radius: 24px;
-        /*float: left;*/
         margin:18px; 
         background: rgba(255, 255, 255, 0.374);
         color: #2BBA99;
@@ -316,23 +313,21 @@ a{
         cursor: pointer;
         text-align:center;
         font-size: 11px;
-    
       }
         
-      .pokemon img{
+      .imgPoke{
         width:60%;
       }
 
-      .pokemon h1{ /*nombre pokemon*/
+     .namePoke{ /*nombre pokemon*/
         background: white;
         border-radius: 24px 24px 0 0px;
         padding: 5px;
         font-size:17px;
       }
 
-      .pokemon p{/*numero pokemon*/
+      .numPoke{/*numero pokemon*/
         font-size: 16px;
-        /*line-height: 25px;*/
         color: white;
         font-weight: bold;
         margin:7px;
@@ -360,8 +355,17 @@ a{
   }
 
   .textContainer1{
-
+    flex-flow:column wrap;
+    text-align:center;
+    padding:3% 8% 3% 8%;
+    justify-content: center;
   }
+
+  .screen1{
+    justify-content: center;
+
+    
+}
 
 }
 
