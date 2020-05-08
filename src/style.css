@@ -10,13 +10,8 @@ a{
   color:white;
 }
 
-.padre{
-	display: flex;
-	flex-flow: column nowrap;
-}
-
 /*SCREEN1*/
-  .screen1{
+  #screen1{
     background:url(http://imgfz.com/i/lQEs3Vq.png);
     background-position: center;
     background-attachment: contain;
@@ -25,26 +20,26 @@ a{
     height: 100vh;
 	}
 
-	    .imgContainer{
+	    #imgContainer{
       width:50%;
       display:flex;
       justify-content:flex-end;
       }
       
-      .imgContainer img{
+      #imgContainer img{
         width:100%;
         object-fit: cover;
         object-position: center center;
         }
 
-		  .textContainer1{
-		  	/*background: #f07b3f;*/
+		  #textContainer1{
+		  /*	background: #f07b3f;*/
         color:white;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         width:50%;
-        padding:3% ;
+        padding:3%;
       }
  
       #title1{/*bienvenidos*/
@@ -61,7 +56,7 @@ a{
       #text1{
         font-size: 16px;
         font-weight: normal;
-        width: 92%;
+        width: 100%;
         padding-top: 20px;
       }
 
@@ -71,9 +66,9 @@ a{
         padding-top: 60px;
       }
 
-     	.categories {
-        /*background: #ffd460;*/
-        padding-top: 15px;
+     	#categories {
+       /* background: #ffd460;*/
+        padding-top: 3%;
 			}
 
 	    .category1 {
@@ -128,7 +123,7 @@ a{
     
  /*SCREEN 2*/
  
-	.section1{
+	#screen2{
 		background: linear-gradient(360deg, #25BF88 0%, #0097A5 70.31%);
 		display: flex;
     color:white;
@@ -136,9 +131,9 @@ a{
     padding:2% 5% 0 5%;
 	}
 
-      .header{
-       /* background-color:#f07b3f;*/
-        /*background: #0097A5; */
+      header{
+       background-color:#f07b3f;
+       /* background: #0097A5; */
         display: flex;
         flex-flow: row nowrap;
         height: 70px;
@@ -147,13 +142,9 @@ a{
         text-transform: uppercase;
         
       }
-
-      .menuH:hover{
-        color: rgb(16, 255, 144);
-      }
-        
-      .menu{
-        /*background:black;*/
+ 
+      #menu{
+        background:black;
         font-size:15px;
         width: 40%;
         display: flex;
@@ -165,9 +156,14 @@ a{
       .menuH {
         display:flex;
        flex-flow:row nowrap;
+       cursor: pointer;
       }
 
-      .search{
+      .menuH:hover{
+        color: rgb(16, 255, 144);
+      }
+
+      #search{
        /* background:rgb(242, 255, 103);*/
         margin:5px;
         display:flex;
@@ -175,7 +171,6 @@ a{
         justify-content:flex-end;
         width:60%;
        
-        
       }
    
       #searcher input{
@@ -187,18 +182,19 @@ a{
       *::-webkit-input-placeholder {
         color:rgb(255, 255, 255);
         font-style: italic;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 600;
       }
 
      
-      .textContainer2{
-          /*background: #35495e;*/
+      #textContainer2{
+          background: #35495e;
           padding:3% 0 4% 0;
           display: flex;
-          flex-flow: row wrap;
-          flex-direction: column;
+          flex-flow: column wrap;
         }
+
+      
 
 
       #title4{
@@ -210,61 +206,32 @@ a{
        margin-top:2%;
       }
 
-			.navigation{
-				background: #70a3c4;
-				flex:1 1 100%;
-			}
-
-		  .filters{
-        /*background: #e8c9eb;*/
+      #containerFilters{
+        background:rgb(140, 98, 98);
         display:flex;
-        width: 30%; 
-        padding:0 3%;
-      }
-
-      /*.filter{
-        width:10%;
-        background: none;
-        border-color: red;
-        border-radius: 10px;;
-      }*/
-
-      /*.filter {
-        width: 12%;
-        height: 40px;
-        background: none;
-        border-color:rgba(109, 255, 211, 0.995);
-        border-radius: 200px;
-        
-        font-size:13px;
-        font-weight: bold;
-        color:white;
-        text-transform: uppercase;
-        cursor: pointer;
-        
-
-      }*/
-      .fatherFilters{
-        display:flex;
-        flex-flow:row wrap;
         width:30%;
+        max-width:350px;
+        min-width:320px;
         justify-content:space-between;
         text-transform: uppercase;
+        margin-bottom: 5%;
        }
 
-      .containerFilters{
+      .filters{/*borde filtros*/
         border-radius:30px;
         display:inline-block;
         overflow:hidden;
         border:3px solid rgba(109, 255, 211, 0.995);
-        width:150px;
+       /* width:150px;*/
+        width: 40%;
         cursor: pointer;
         text-align:center;
         
       }
 
       .filter{
-        width:120px;
+        /*width:120px;*/
+        width: 80%;
         height:32px;
         border:0px;
         outline:none;
@@ -273,25 +240,16 @@ a{
         color:white;
         font-size:13px;
         font-weight: bold;
-        color:white;
         text-transform: uppercase;
-        
       }
 
-
-      .pokedexContainer{
+      #pokedexContainer{
         /*background: #bad1e0;*/
         display:flex;
         flex-wrap: wrap;
         justify-content: center;
 		  }
 
-      /* display: flex;
-    
-    
-     flex:1 1 auto;
-        margin:0 20px;
-        pagging: 3%;*/
       #root{
         display: flex;
         justify-content:space-evenly;
@@ -334,18 +292,34 @@ a{
         
       }
 
-      .footer{
-        background: black;
+      footer{
+        background: #0197A5;
         display: flex;
         justify-content: center;
-        align-content: flex-end;
+        align-items: center;
+        margin: 0%;
+        height:50px;
+        width:100%;
+        color:white;
+        font-size:12px;
+        margin-top:5%;
       }
+      .errorText {
+        display: block;
+        padding: 20px;
+        border: 3px solid rgb(235, 54, 22);
+        border-radius: 15px;
+        margin: 20px;
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+  
 
-      .foot{
-        background: #e6af2e;
-        width: 300px;
-      }
-    
+
+
+
+
+
+
 
 
 /*MEDIA*/
@@ -357,23 +331,57 @@ a{
   .textContainer1{
     flex-flow:column wrap;
     text-align:center;
-    padding:3% 8% 3% 8%;
-    justify-content: center;
   }
 
   .screen1{
     justify-content: center;
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3% 0 0 30%;
+  }
 
-    
-}
+/*SCREEN2*/
 
-}
+  .menu {
+    font-size: 13px;
+  }
+
+  .filter{
+    font-size:11px;
+  }
+
+
+
+
+
+
+
+ /* .containerFilters {
+   background:black;
+    width:38%;
+    justify-content:none;
+  }
+
+  .filters{
+    width: 35%;
+  }
+  
+  .filter{
+    width: 70%;
+    font-size:11px;
+  }
+
+  
+}*/
 
 
 
 
 @media all and (max-width: 600px){
-	.section1{
+	.screen2{
 		flex-direction: column;
 	}
 	

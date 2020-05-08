@@ -8,23 +8,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="padre">
-		<section class="screen1">
+		<section id="screen1">
       
 
-      <div class="imgContainer"><img src="http://imgfz.com/i/R7eDH3b.png"></div>
-      <div class="textContainer1">
+      <div id="imgContainer"><img src="http://imgfz.com/i/R7eDH3b.png"></div>
+      <div id="textContainer1">
 				<h1 id="title1">Bienvenid@s a</h1>
         <h1 id="title2">POKEKANTO</h1>
         <p id="text1">Aquí podrás encontrar la información sobre tus pokémon de la región de Kanto para jugar en Pokemón Go y ser el mejor!</p>
         <h1 id="title3">ELIGE UNA CATEGORÍA</h1>
 
-        <div class="categories">
+        <div id="categories">
           <div class="category1">
             <div class="icon" id="icon1">
               <img src="http://imgfz.com/i/vTjmB4F.png">
             </div><!--icon1-->
-            <a class="textIcon" href="#section1" onclick="">POKÉDEX</a>
+            <div class="textIcon" id="textIcon1">POKÉDEX</div>
           
           </div><!--category1-->
 
@@ -32,14 +31,14 @@
             <div class="icon" id="icon2">
               <img src="http://imgfz.com/i/X1k4HjM.png">
             </div><!--icon2-->
-            <div class="textIcon">ESTADÍSTICAS</div>
+            <div class="textIcon" id="textIcon2">ESTADÍSTICAS</div>
             </div> <!--category2-->
 
           <div class="category1">
             <div class="icon" id="icon3">
               <img src="http://imgfz.com/i/hCQSlZY.png">
             </div><!--icon3-->
-            <div class="textIcon">CRIANZA</div>
+            <div class="textIcon" id="textIcon3">CRIANZA</div>
           </div><!--category1-->
 
         </div><!--categories-->
@@ -48,32 +47,32 @@
     </section><!--pantalla1-->
     
     <!--Screen2-->
-		<div class="section1" id="section1">
-      	<header class="header">
-        <div class="menu">
+		<div id="screen2">
+      	<header>
+        <div id="menu">
 				<div class="menuH" id="menu1">inicio</div>
         <div class="menuH" id="menu2">pokedex</div>
         <div class="menuH" id="menu3">estadísticas</div>
         <div class="menuH" id="menu4">crianza</div>
       </div> <!--menu-->
-      <div class=search>
+      <div id="search">
        <div id="searcher">
-        <input type="text" placeholder="BUSCAR POKÉMON">
+        <input type="text" id="pokeSearch" placeholder="BUSCAR POKÉMON 🔍">
         <i class="fas fa-search"></i>
       </div><!--search-->
     </div>
 			</header>
-			<div class="textContainer2">
+			<div id="textContainer2">
 				<h1 id="title4">POKÉDEX</h1>
 				<p id="text2">Si quieres ser el mejor entrenador:
 Selecciona, filtra y descubre las principales características de tu pokémon.</p>
       </div>
-      <div class="fatherFilters">
+      <div id="containerFilters">
 
-			<div class="containerFilters">
+			<div class="filters">
         <select class="filter" name="" id="filterType">
-          <option selected disabled>Tipo</option>
-          <option value="Todos">Todos</option>
+        <!--<option selected disabled >Tipo</option>-->
+          <option value="type" >Tipo</option>
           <option value="Water">Agua</option>
           <option value="Bug">Bicho</option>
           <option value="Dragon">Dragón</option>
@@ -91,24 +90,20 @@ Selecciona, filtra y descubre las principales características de tu pokémon.</
           <option value="Flying">Volador</option>
           
       </select> 
-      </div><!--containerFilters-->
-
-      <div class="containerFilters">
+      </div><!--filters-->
+      <div class="filters">
         <select class="filter" name="" id="filterOrder">
           <option value="upward">Ordenar</option>
           <option value="upward">Nº Ascendente</option>
           <option value="falling">Nº Descendente</option>
-        
-
-          
       </select> 
-      </div><!--containerFilters-->
+      </div><!--filters-->
 
 
 
     </div><!--fatherFilters-->
 
-      	<div class="pokedexContainer">
+      	<div id="pokedexContainer">
 			
     <!--trae del js a html contenedor raiz/ imprimir pokedex
     <div id="root"></div>-->
@@ -118,10 +113,9 @@ Selecciona, filtra y descubre las principales características de tu pokémon.</
     </section>
     <div id="root"></div>
 
-		<footer class="footer">
-		  <nav class="foot">Redes Sociales</nav>
-		</footer>
-	</div><!--padre-->
+		
+    <footer>Copyright 2020 Paulina & Alejandra</footer>
 <script src="main.js" type="module"></script>    
 </body>
+
 </html>
