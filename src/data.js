@@ -46,3 +46,10 @@ export const sortArray = (arr, condition) => {
   }
   return arrPokemon;
 };
+
+//SEARCH
+
+export const searchText = (data, property, condition) => {
+  const searchPkm = data.filter(element => (element[property]).indexOf(condition) !== -1);
+  return searchPkm;
+};
