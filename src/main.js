@@ -15,6 +15,8 @@ document.getElementById("menu1").addEventListener("click", ()=>{
   document.getElementById("screen2").style.display="none";
 });
 
+
+
 /*_________________________________________________________*/
 /*IMPRIME POKEDEX EN HTML*/
 
