@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterPokeType, sortArray
+import { filterPokeType, sortArray, searchPoke
   } from './data.js';
 
 /*IMPRIME POKEDEX EN HTML*/
@@ -33,7 +33,9 @@ for (let i = 0; i < pokedata.length; i++){
 printPokedex.innerHTML = cardTemplate;  
 }
 showPokedex(pokedata);
-/*modalPokemon(pokedata);*/
+
+modalPokemon(pokedata);
+console.log(modalPokemon)
 
 /*_________________________________________________________
 FILTRAR POR TIPO*/
@@ -46,8 +48,9 @@ selectType.addEventListener ("change", () => {
   } else {
     let resultType = filterPokeType (pokedata, typePoke);
     showPokedex(resultType);
-   /*modalPokemon (resultType);
-   console.log(resultType);*/
+   
+  modalPokemon (resultType);
+  console.log(resultType);
   }
 });
 
@@ -79,6 +82,8 @@ backgroundModal = modalBack
 contentPokeModal = containerModal 
 closeCard= infoUpX
 */
+
+let modal= modalPokemon;
 
 function modalPokemon(pokedata){
   let printModalPoke= document.getElementById("printModal");
@@ -153,3 +158,27 @@ function modalPokemon(pokedata){
   });
   }
   }
+
+/*____________________________________
+BUSCADOR*/
+
+
+document.getElementById('search').addEventListener('click', () => {
+  document.getElementById('root').innerHTML = "";
+  const searchInput = document.getElementById('searchBar').value;
+  document.getElementById("searchBar").value = "";
+  const searchName = searchInput.charAt(0).toUpperCase() + searchInput.slice(1).toLowerCase();
+  let inputName = searchPoke(pokedata,searchName);
+  for (let i = 0; i <inputName.length; i++){
+     document.getElementById('root').innerHTML += `
+                    <div class="pokemon">
+                    <h1 class="namePoke">${inputName[i].name}</h1>
+                    <p class="numPoke">${inputName[i].num}</p>
+                    <img class="imgPoke" src="${inputName[i].img}">
+                    </div>
+                    `;
+                    showPokedex(inputName);
+                      
+  }
+});
+
