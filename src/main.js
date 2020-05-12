@@ -2,7 +2,7 @@ import data from './data/pokemon/pokemon.js';
 import { filterPokeType, sortArray, searchPoke
   } from './data.js';
 
-/*IMPRIME POKEDEX EN HTML*/
+/*DIRIGE A PANTALLAS*/
 document.getElementById("screen2").style.display="none";
 
 document.getElementById("textIcon1").addEventListener("click", ()=>{
@@ -24,26 +24,26 @@ document.getElementById("menu2").addEventListener("click", ()=>{
 
 });
 
-/*_________________________________________________________*/
-/*IMPRIME POKEDEX EN HTML*/
+//_________________________________________________________
+//IMPRIME POKEDEX EN HTML
 
-const pokedata = data.pokemon;
-const printPokedex = document.getElementById("root");
-function showPokedex (pokedata){
-let pokeCard = "";
-for (let i = 0; i < pokedata.length; i++){
-  pokeCard +=`<div class="pokemon">
+const pokedata = data.pokemon; 
+const printPokedex = document.getElementById("root"); //root de html cambia a constante printPokedex
+function showPokedex (pokedata){                      //se crea función que imprime pokedex
+  let pokeCard = "";                                  //
+  for (let i = 0; i < pokedata.length; i++){          //
+    pokeCard +=`<div class="pokemon">
                   <h1 class="namePoke">${pokedata[i].name}</h1>
                   <p class="numPoke">${pokedata[i].num}</p>
                   <img class="imgPoke" src="${pokedata[i].img}">
-                  </div>`
+                </div>`
                    
 }
 printPokedex.innerHTML = pokeCard;  
+modalPokemon(pokedata);
 }
 showPokedex(pokedata);
 
-modalPokemon (pokedata);
 
 /*<div id="${pokedata[i].id}"
 function showModal (pokedata){
@@ -54,137 +54,116 @@ console.log("toma el click")
 
 /*_________________________________________________________
 FILTRAR POR TIPO*/
+const pokedataFilter = pokedata;
 const selectType = document.getElementById("filterType");
-selectType.addEventListener ("change", () => {
-  let typePoke = selectType.value;
-  if (typePoke === "allType"){
-   showPokedex(pokedata);
-    /*modalPokemon(pokedata);*/
-  } else {
-    let resultType = filterPokeType (pokedata, typePoke);
-    showPokedex(resultType);
-   
-  modalPokemon (resultType);
-  console.log(resultType);
-  }
-});
 
+function pokemonFilter (pokedataFilter){
+    selectType.addEventListener ("change", () => {
+      let typePoke = selectType.value;
+      if (typePoke === "allType"){
+        showPokedex(pokedataFilter);
+      } else {
+        let resultType = filterPokeType (pokedataFilter, typePoke);
+        showPokedex(resultType);
+      }
+    });
+    }
+    pokemonFilter(pokedataFilter);
+    
 /*_________________________________________________________
 ORDENAR NÚMERO*/
+
+const pokedataOrder = pokedataFilter;
 const orderArray = document.querySelector('#dropDown');
 orderArray.addEventListener('change', () => {
-  let orderSelect = orderArray.value;
-  console.log(orderSelect)
   document.getElementById('root').innerHTML = '';//limpia root
-
+  let orderSelect = orderArray.value;
   let typePoke = selectType.value;
-  let resultType = filterPokeType (pokedata, typePoke);
+  let resultType = filterPokeType (pokedataOrder, typePoke);
 
   showPokedex(sortArray(resultType, orderSelect));
-  /*modalPokemon(sortArray(resultType, orderSelect));*/
-
+ 
 });
 
-function showTypeOrder(pokedata){
-  const showType = document.getElementById("type");
+/*Slect del filtro "tipo" funcione con ordenar
+const showType = document.getElementById("type");
 
-showType.addEventListener('click', () => {
-    showPokedex(pokedata);
-   
+function showTypeOrder(pokedataOrder){
+  showType.addEventListener('click', () => {
+const showType = document.getElementById("type");
+let selectType1 = showType.value;
+ showTypeOrder(pokedataOrder);
 });
 }
-showTypeOrder(pokedata);
+showTypeOrder(pokedataOrder);*/
 /*_________________________________________________________
 MODAL argumento:(resultType, orderSelect)*/
 
-/*backgroundPokeModal= printModalPoke
-backgroundModal = printModal
-clickImg = infoUpImg (deberia ser el cuadro completo)
-clickPokeImg = clickToModal
-pokeImg = pokeImg
-backgroundModal = modalBack
-contentPokeModal = containerModal 
-closeCard= infoUpX
-*/
-
-
-function modalPokemon(pokedata){
+function modalPokemon(data){
   let printModalPoke= document.getElementById("printModal");
-  let clickToModal = document.getElementsByClassName("infoUpImg");
-  
+  let clickToModal = document.getElementsByClassName("modalContent");
+  let modalPoke = document.getElementsByClassName("pokemon");
   printModalPoke.style.display="none";
-  
-  for(let i=0; i<clickToModal.length; i++){
-  let pokeImg = clickToModal[i];
+  for(let i=0; i<modalPoke.length; i++){
+    let modal = modalPoke[i];
+    modal.addEventListener("click",() =>{
+      printModalPoke.style.display = ""; 
 
-  pokeImg.addEventListener("click",() =>{
-  let containerModal = document.getElementById("modalBack");
-  containerModal.innerHTML="";
-  printModalPoke.style.display="block";
-  
-  containerModal.innerHTML +=`
+      clickToModal.innerHTML +=`
+        <div id="modalBack">
+        <div id="modalFront">
+          <div id="infoUp">
+            <div id="infoUp1">
+              <div class="infoUpImg">
+              <img src="${data[i].img}">
+              </div><!--infoUpImg-->
+              <div class="infoUpX">
+              <img src="http://imgfz.com/i/ZXahASe.png">
+              </div><!--infoUpX-->
+            </div><!--infoUp1-->
 
-  <div id="modalBack">
-  <div id="modalFront">
+            <div id="infoUp2">
+              <div id="infoUpName">${data[i].name}</div>
+              <div id="infoUpNum">${data[i].num}</div>
+            </div><!--infoUp2-->
+            </div><!--infoUp-->
 
-    <div id="infoUp">
-
-      <div id="infoUp1">
-        <div class="infoUpImg">
-        <img src="${pokedata[i].img}">
-        </div><!--infoUpImg-->
-        <div class="infoUpX">
-         <img src="http://imgfz.com/i/ZXahASe.png">
-        </div><!--infoUpX-->
-      </div><!--infoUp1-->
-
-      <div id="infoUp2">
-        <div id="infoUpName">${pokedata[i].name}</div>
-        <div id="infoUpNum">${pokedata[i].num}</div>
-      </div><!--infoUp2-->
-      </div><!--infoUp-->
-
-  <div id="infoDown">
-        <div class="infoTitle">Tipo</div>
-        <div class="infoPoke">${pokedata[i].type}</div>
-        <div class="infoTitle">Peso</div>
-        <div class="infoPoke">${pokedata[i].weight}</div>
-        <div class="infoTitle">Altura</div>
-        <div class="infoPoke">${pokedata[i].height}</div>
-        <div class="infoTitle">Evolución</div>
-        <div class="infoPoke" id="infoPokeEnd">${pokedata[i].next_evolution[0].name}</div>
-    
-    </div><!--infoDown-->
-  
-  </div><!--modalFront-->
-</div><!--modalBack-->
-
-
-<div class="btnOk">OK</div>
-  </div>
-  </div>
-  </div>
-  
-  `;
+        <div id="infoDown">
+              <div class="infoTitle">Tipo</div>
+              <div class="infoPoke">${data[i].type}</div>
+              <div class="infoTitle">Peso</div>
+              <div class="infoPoke">${data[i].weight}</div>
+              <div class="infoTitle">Altura</div>
+              <div class="infoPoke">${data[i].height}</div>
+              <div class="infoTitle">Evolución</div>
+              <div class="infoPoke" id="infoPokeEnd">Evolución: ${data[i].next_evolution ? data[i].next_evolution[0].name : 'No tiene'}</div>
+              <div class="infoPoke" id="infoPokeEnd">Pre evolución: ${data[i].prev_evolution ? data[i].prev_evolution[0].name : 'No tiene'}</div>
+          </div><!--infoDown-->
+        
+        </div><!--modalFront-->
+      </div><!--modalBack-->
+        `;
   
   let close = document.getElementsByClassName("infoUpX")[0];
-  close.addEventListener("click",()=> {
+  close.addEventListener('click', ()=>{
     printModalPoke.style.display="none";
-    containerModal.innerHTML="";
+    clickToModal.innerHTML="";
   });
   
-  let btnOkPoke = document.getElementsByClassName("btnOk")[0];
-  btnOkPoke.addEventListener("click",()=> {
-    printModalPoke.style.display="none";
-    containerModal.innerHTML="";
-  });
+  window.onclick = function(arroz) { 
+    if (arroz.target == printModalPoke) {
+      printModalPoke.style.display = "none";
+      clickToModal.innerHTML="";
+    }
+  }
+  
   });
   }
   }
-
+  console.log(modalPokemon)
+  
 /*____________________________________
 BUSCADOR*/
-
 
 document.getElementById('search').addEventListener('click', () => {
   document.getElementById('root').innerHTML = "";
@@ -192,16 +171,19 @@ document.getElementById('search').addEventListener('click', () => {
   document.getElementById("searchBar").value = "";
   const searchName = searchInput.charAt(0).toUpperCase() + searchInput.slice(1).toLowerCase();
   let inputName = searchPoke(pokedata,searchName);
-  for (let i = 0; i <inputName.length; i++){
-     document.getElementById('root').innerHTML += `
-                    <div class="pokemon">
-                    <h1 class="namePoke">${inputName[i].name}</h1>
-                    <p class="numPoke">${inputName[i].num}</p>
-                    <img class="imgPoke" src="${inputName[i].img}">
-                    </div>
-                    `;
-                    showPokedex(inputName);
+
+    for (let i = 0; i <inputName.length; i++){
+       document.getElementById('root').innerHTML += `
+                              <div class="pokemon">
+                              <h1 class="namePoke">${inputName[i].name}</h1>
+                              <p class="numPoke">${inputName[i].num}</p>
+                              <img class="imgPoke" src="${inputName[i].img}">
+                              </div>
+                              `;
+                              showPokedex(inputName);
                       
   }
 });
+
+
 
