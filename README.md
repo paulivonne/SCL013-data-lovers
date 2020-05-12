@@ -11,8 +11,11 @@ Se realizó una búsqueda en facebook del grupo con mayores usuarios en Chile de
 Como resultado encontramos que la mayoría busca completar su pokédex y tener pokémon con buenas estadísticas. Por lo tanto, decidimos tener 3 categorías principales en nuestra web:
 
 **• Pokédex:** Mostrar los 151 pokémon de la región de kanto.
+
 **• Estadísticas:** Mostrar información específica de mejores puntajes de cada pokémon.
+
 **• Crianza:** Mostrar información de caramelos para saber cúantos km recorrer con un pókemon compañero y poder tener su evolución.
+
 
 ### Concepto de idea y diseño
 
