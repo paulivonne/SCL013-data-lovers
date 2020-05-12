@@ -13,9 +13,16 @@ document.getElementById("menu1").addEventListener("click", ()=>{
   document.getElementById("screen1").style.display="block";
   document.getElementById("screen1").style.display="";
   document.getElementById("screen2").style.display="none";
+  showPokedex(pokedata);
 });
 
+document.getElementById("menu2").addEventListener("click", ()=>{
+  document.getElementById("screen2").style.display="block";
+  document.getElementById("screen2").style.display="";
+  document.getElementById("screen1").style.display="none";
+  showPokedex(pokedata);
 
+});
 
 /*_________________________________________________________*/
 /*IMPRIME POKEDEX EN HTML*/
@@ -23,21 +30,27 @@ document.getElementById("menu1").addEventListener("click", ()=>{
 const pokedata = data.pokemon;
 const printPokedex = document.getElementById("root");
 function showPokedex (pokedata){
-let cardTemplate = "";
+let pokeCard = "";
 for (let i = 0; i < pokedata.length; i++){
-  cardTemplate +=`<div class="pokemon">
-                          <h1 class="namePoke">${pokedata[i].name}</h1>
-                          <p class="numPoke">${pokedata[i].num}</p>
-                          <img class="imgPoke" src="${pokedata[i].img}">
-                          </div>`
+  pokeCard +=`<div class="pokemon">
+                  <h1 class="namePoke">${pokedata[i].name}</h1>
+                  <p class="numPoke">${pokedata[i].num}</p>
+                  <img class="imgPoke" src="${pokedata[i].img}">
+                  </div>`
                    
 }
-printPokedex.innerHTML = cardTemplate;  
+printPokedex.innerHTML = pokeCard;  
 }
 showPokedex(pokedata);
 
-modalPokemon(pokedata);
-console.log(modalPokemon)
+modalPokemon (pokedata);
+
+/*<div id="${pokedata[i].id}"
+function showModal (pokedata){
+const pokeCard = document.getElementById(${pokedata[i].id});
+pokeCard.addEventListener("click",modalPokemon());
+console.log("toma el click")
+}*/
 
 /*_________________________________________________________
 FILTRAR POR TIPO*/
@@ -62,16 +75,25 @@ const orderArray = document.querySelector('#dropDown');
 orderArray.addEventListener('change', () => {
   let orderSelect = orderArray.value;
   console.log(orderSelect)
-  document.getElementById('root').innerHTML = '';
+  document.getElementById('root').innerHTML = '';//limpia root
 
   let typePoke = selectType.value;
   let resultType = filterPokeType (pokedata, typePoke);
 
   showPokedex(sortArray(resultType, orderSelect));
   /*modalPokemon(sortArray(resultType, orderSelect));*/
+
 });
 
+function showTypeOrder(pokedata){
+  const showType = document.getElementById("type");
 
+showType.addEventListener('click', () => {
+    showPokedex(pokedata);
+   
+});
+}
+showTypeOrder(pokedata);
 /*_________________________________________________________
 MODAL argumento:(resultType, orderSelect)*/
 
@@ -85,7 +107,6 @@ contentPokeModal = containerModal
 closeCard= infoUpX
 */
 
-let modal= modalPokemon;
 
 function modalPokemon(pokedata){
   let printModalPoke= document.getElementById("printModal");
