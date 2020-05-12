@@ -38,14 +38,15 @@ Una vez que definimos los usuarios con los que íbamos a trabajar comenzamos a d
 
 ### Baja fidelidad
 
-![imgbaja](http://imgfz.com/i/OpZue2t.png)
+![imgbaja](http://imgfz.com/i/5HXFZMQ.png)
 
 ### Alta fidelidad inicial
 
 Enviamos a los usuarios el primer prototipo en alta fidelidad en Figma, recibimos feedback y rescatamos los siguientes comentarios:
 
-Positivos: Sitio y diseño limpio, ordenado y fácil de leer.
-A mejorar: Los colores de fondo no logran relacionarse con el juego, además buscar una forma de diferenciar mejor las categorías de "Combate" y "Colección", el nombre correcto de esta última es "Crianza".
+**Positivos:** Sitio y diseño limpio, ordenado y fácil de leer.
+
+**A mejorar:** Los colores de fondo no logran relacionarse con el juego, además buscar una forma de diferenciar mejor las categorías de "Combate" y "Colección", el nombre correcto de esta última es "Crianza".
 
 ![imgaltaini](http://imgfz.com/i/ZYgeOTU.png)
 
