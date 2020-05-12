@@ -15,7 +15,7 @@
       <div id="textContainer1">
 				<h1 id="title1">Bienvenid@s a</h1>
         <h1 id="title2">POKEKANTO</h1>
-        <p id="text1">Aquí podrás encontrar la información sobre tus pokémon de la región de Kanto para jugar en Pokemón Go y ser el mejor!</p>
+        <p id="text1">Aquí podrás encontrar la información sobre los 151 Pokémon de la región de Kanto para convertirte ¡en el mejor entrenador Pokémon!</p>
         <h1 id="title3">ELIGE UNA CATEGORÍA</h1>
 
         <div id="categories">
@@ -47,7 +47,7 @@
     </section><!--pantalla1-->
     
     <!--Screen2-->
-		<div id="screen2">
+		<section id="screen2">
       	<header>
         <div id="menu">
 				<div class="menuH" id="menu1">inicio</div>
@@ -56,23 +56,21 @@
         <div class="menuH" id="menu4">crianza</div>
       </div> <!--menu-->
       <div id="search">
-       <div id="searcher">
         <input type="text" id="pokeSearch" placeholder="BUSCAR POKÉMON 🔍">
         <i class="fas fa-search"></i>
-      </div><!--search-->
-    </div>
+     
+    </div><!--search-->
 			</header>
 			<div id="textContainer2">
 				<h1 id="title4">POKÉDEX</h1>
-				<p id="text2">Si quieres ser el mejor entrenador:
-Selecciona, filtra y descubre las principales características de tu pokémon.</p>
+				<p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
       </div>
       <div id="containerFilters">
 
 			<div class="filters">
         <select class="filter" name="" id="filterType">
         <!--<option selected disabled >Tipo</option>-->
-          <option value="type" >Tipo</option>
+          <option value="allType" >Tipo</option>
           <option value="Water">Agua</option>
           <option value="Bug">Bicho</option>
           <option value="Dragon">Dragón</option>
@@ -92,29 +90,30 @@ Selecciona, filtra y descubre las principales características de tu pokémon.</
       </select> 
       </div><!--filters-->
       <div class="filters">
-        <select class="filter" name="" id="filterOrder">
+        <select class="filter" name="" id="dropDown" >
           <option value="upward">Ordenar</option>
           <option value="upward">Nº Ascendente</option>
           <option value="falling">Nº Descendente</option>
+          <option value="sortAz">A-Z</option>
+          <option value="sortZa">Z-A</option>
       </select> 
+      
       </div><!--filters-->
-
-
-
     </div><!--fatherFilters-->
-
       	<div id="pokedexContainer">
-			
     <!--trae del js a html contenedor raiz/ imprimir pokedex
     <div id="root"></div>-->
-    
-
     </div><!--pokedexcontainer-->
-    </section>
     <div id="root"></div>
+    <div id="printModal" class="printModal" >
+      <div class="modalContent" id="modalContent"></div>
+    </div>
+    <footer>Copyright 2020 Paulina & Alejandra</footer>
+    </section>
+   
 
 		
-    <footer>Copyright 2020 Paulina & Alejandra</footer>
+
 <script src="main.js" type="module"></script>    
 </body>
 
