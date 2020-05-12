@@ -36,3 +36,12 @@ export const sortArray = (arr, condition) => {
   }
   return arrPokemon;
 };
+
+//BUSCADOR
+
+export const searchPoke = (pokedata, searchName)=>{
+  const findPoke = pokedata.filter((pokemon) => {
+  return pokemon.name.includes(searchName);
+ });
+ return findPoke; //Busqueda terminada
+};
