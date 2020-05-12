@@ -7,8 +7,11 @@
 
 a{
   text-decoration: none;
-  color:white;
-}
+  color:white;}
+
+body{
+    font-size:16px;
+  }
 
 /*SCREEN1*/
   #screen1{
@@ -43,32 +46,33 @@ a{
       }
  
       #title1{/*bienvenidos*/
-        font-size: 20px;
+        font-size: 1.25em;
         font-weight: normal;
         text-transform: uppercase;
       }
 
       #title2{/*pokekanto*/
-        font-size: 45px;
+        font-size: 3.1em;
         font-weight: 900;
       }
 
       #text1{
-        font-size: 16px;
+        font-size: 0.9em;
         font-weight: normal;
         width: 100%;
-        padding-top: 20px;
+        max-width:90%;
+        padding-top: 1.25rem;
       }
 
       #title3{/*categorias*/
-        font-size: 18px;
+        font-size: 1.1em;
         font-weight: bold;
-        padding-top: 60px;
+        padding-top: 3rem;
       }
 
      	#categories {
        /* background: #ffd460;*/
-        padding-top: 3%;
+        padding-top: 1rem;
 			}
 
 	    .category1 {
@@ -83,35 +87,22 @@ a{
         /*background: #ffd460;*/
         display:flex;
         margin: 0px;
-        padding-top: 20px;
+        padding-top: 1.25rem;
       }
 
-      #icon1 img{
+      .icon img{
+
         width: 70%;
+        height: 70%;
       }
 
-      #icon2 img{
-        width: 70%;
-      }
-
-      #icon3 img{
-        width: 70%;
-      }
-          
-      /*#icon1 img:hover {
-        background-image: url(http://imgfz.com/i/ONIWMy9.png); 
-        cursor: pointer;
-        width: 70%;
-      }*/
-
-      
       .textIcon {
         color: white;
-        font-size: 15px;
+        font-size: 0.9em;
         font-weight: bold;
         text-transform: uppercase;
-        margin-left: 2%;
-        padding-top: 20px;
+        margin-left: 0.7rem;
+        padding-top: 1.25rem;
         cursor: pointer;
 
       }
@@ -128,35 +119,34 @@ a{
 		display: flex;
     color:white;
     flex-direction:column;
-    padding:2% 5% 0 5%;
+    padding:0 4rem 0 4rem;
+    
 	}
 
       header{
-       background-color:#f07b3f;
-       /* background: #0097A5; */
+       /*background-color:#dfa88c;*/
         display: flex;
         flex-flow: row nowrap;
-        height: 70px;
-        align-content:center;
+        max-width:81.3rem;
+        height: 4.3rem;
         font-weight: bold;
         text-transform: uppercase;
         
       }
  
       #menu{
-        background:black;
-        font-size:15px;
-        width: 40%;
+       /*background:rgb(140, 215, 210);*/
+        font-size:0.8em;
+        width: 70%;
         display: flex;
-        justify-content:space-between;
         flex-wrap:wrap;
-        align-items: center;
+        align-items: flex-end;
+       
       }
 
       .menuH {
-        display:flex;
-       flex-flow:row nowrap;
        cursor: pointer;
+       margin-right:40px;
       }
 
       .menuH:hover{
@@ -164,113 +154,113 @@ a{
       }
 
       #search{
-       /* background:rgb(242, 255, 103);*/
-        margin:5px;
+      /* background:rgb(208, 215, 134);*/
         display:flex;
-        align-items:center;
-        justify-content:flex-end;
-        width:60%;
+        align-items:flex-end;
+        width:30%;
+        justify-content: flex-end;
        
       }
    
-      #searcher input{
-        padding:4% 22%;
-        border-radius:20px;
+      #search input{
+        height: 2.5em;
+        width: 20em;
+        border-radius:1.25em;
         background: rgba(255, 255, 255, 0.392);
       } 
 
       *::-webkit-input-placeholder {
         color:rgb(255, 255, 255);
         font-style: italic;
-        font-size: 11px;
+        font-size: 0.9em;
         font-weight: 600;
+        text-align: center;
       }
 
      
       #textContainer2{
-          background: #35495e;
-          padding:3% 0 4% 0;
+         /*background: #35495e;*/
+          padding:5% 0 4% 0;
           display: flex;
           flex-flow: column wrap;
+          width:100%;
+        
         }
 
-      
-
-
       #title4{
-        font-size:27px;
+        font-size:2.2em;
       }
 
       #text2{/*texto pokedex*/
-       font-size:15px;
-       margin-top:2%;
+       margin-top:1.5rem;
+       font-size: 0.9em;
+      
       }
 
       #containerFilters{
-        background:rgb(140, 98, 98);
+      /*background: rosybrown;*/
         display:flex;
-        width:30%;
-        max-width:350px;
-        min-width:320px;
-        justify-content:space-between;
+        width:30rem;
+        margin-top: 1rem;
         text-transform: uppercase;
-        margin-bottom: 5%;
+        flex-wrap:wrap;
        }
 
       .filters{/*borde filtros*/
-        border-radius:30px;
+        margin: 0 2rem 1.5rem 0;
+        border-radius:1.8em;
         display:inline-block;
         overflow:hidden;
-        border:3px solid rgba(109, 255, 211, 0.995);
-       /* width:150px;*/
-        width: 40%;
+        border:0.2em solid rgba(109, 255, 211, 0.995);
+        width: 10rem;
         cursor: pointer;
         text-align:center;
         
       }
 
       .filter{
-        /*width:120px;*/
         width: 80%;
-        height:32px;
-        border:0px;
+        height:2.3em;
+        border:0em;
         outline:none;
         background:none;
         cursor: pointer;
         color:white;
-        font-size:13px;
+        font-size:0.8em;
         font-weight: bold;
         text-transform: uppercase;
       }
 
       #pokedexContainer{
-        /*background: #bad1e0;*/
         display:flex;
         flex-wrap: wrap;
         justify-content: center;
+        font-size:1rem;
 		  }
 
       #root{
+
+       /* background: #1ca4ff;*/
+       margin-top: 0.5rem;
         display: flex;
         justify-content:space-evenly;
         flex-wrap:wrap; 
-        /*width:80%;*/
         justify-content: center;
         }
 
 
       .pokemon{
-        width: 170px;
-        height: 170px; 
+        width: 11.3em;
+        height: 11.3em; 
         box-sizing: border-box;
-        border-radius: 24px;
-        margin:18px; 
+        border-radius: 1.5em;
+        margin:1.2em; 
         background: rgba(255, 255, 255, 0.374);
         color: #2BBA99;
         font-weight: bold;
         cursor: pointer;
         text-align:center;
-        font-size: 11px;
+      
       }
         
       .imgPoke{
@@ -279,40 +269,168 @@ a{
 
      .namePoke{ /*nombre pokemon*/
         background: white;
-        border-radius: 24px 24px 0 0px;
-        padding: 5px;
-        font-size:17px;
+        border-radius: 1.5rem 1.5rem 0 0;
+        padding: 0.4em;
+        font-size:1.1rem;
       }
 
       .numPoke{/*numero pokemon*/
-        font-size: 16px;
         color: white;
         font-weight: bold;
-        margin:7px;
+        margin:0.4rem;
+        font-size:1rem;
         
       }
 
       footer{
-        background: #0197A5;
+        /*background: #0197A5;*/
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0%;
-        height:50px;
         width:100%;
+        height: 90px;
         color:white;
-        font-size:12px;
-        margin-top:5%;
-      }
-      .errorText {
-        display: block;
-        padding: 20px;
-        border: 3px solid rgb(235, 54, 22);
-        border-radius: 15px;
-        margin: 20px;
-        background-color: rgba(255, 255, 255, 0.6);
+        font-size:0.75rem;
       }
   
+      .modalCharacters{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /*background: palevioletred;*/
+    }
+
+
+
+/*________________________________
+MODAL*/
+      #modalBack{
+        position:fixed;
+        background:rgba(0, 0, 0, 0.408);
+        z-index: 1;
+        overflow: auto;
+        top: 0;
+        bottom:0;
+        left:0;
+        right:0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      #modalFront{
+        background:rgb(255, 255, 255);
+        border: 2px solid #6DFFD3;
+        border-radius:30px;
+        width:320px;
+        height: 70%;
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        
+      }
+
+      #infoUp{
+        /*background:rgba(128, 253, 249, 0.381);*/
+        width: 100%;
+        height:40%;
+        display:flex;
+        flex-direction:column;
+        
+      }
+
+      #infoUp1{
+        /*background:rgb(4, 117, 255);*/
+        width: 100%;
+        height:50%;
+        display:flex;
+      }
+
+      .infoUpImg{
+        background:rgb(233, 135, 250);
+        width: 80%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+      }
+
+      .infoUpX{
+        /*background:rgb(221, 156, 233);*/
+        width: 20%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        margin-top:10px;
+      }
+      #infoUpX img{
+        width: 40px;
+        height:40px;
+      }
+
+      #infoUp2{
+        /*background:rgb(0, 255, 247);*/
+        width: 100%;
+        height:50%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding: 15px 0 15px 0;
+      }
+
+      #infoUpName{
+        color: #0CA1AF;
+        font-size:30px;
+        font-weight:bold;
+      }
+
+      #infoUpNum{
+        color: #25BF88;
+        font-size:20px;
+        font-weight:bold;
+        margin-top:5px;
+      }
+
+      #infoDown{
+        /*background:rgba(128, 134, 253, 0.592);*/
+        width: 100%;
+        height:60%;
+        display:flex;
+        align-content:center;
+        flex-direction:column;
+      }
+
+      .infoTitle{
+        background:linear-gradient(90deg, #109DAB -5.26%, #2BBA99 95.96%);
+        color:white;
+        font-weight:bold;
+        height:35px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:18px;
+        text-transform:uppercase;
+      }
+
+      .infoPoke{
+        background:#F2F2F2;
+        color:#828282;
+        height:55px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      #infoPokeEnd{
+        border-radius: 0 0 30px 30px;
+        background:#F2F2F2;
+        color:#828282;
+        height:55px;
+        font-size:16px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
 
 
 
@@ -322,81 +440,115 @@ a{
 
 
 
-/*MEDIA*/
-@media (max-width:1000px){
-  .imgContainer{
+
+
+
+
+
+
+/*____________________________________________________
+MEDIA*/
+@media (max-width:768px){
+/*SCREEN1*/
+  #imgContainer{
     display:none;
   }
-
-  .textContainer1{
-    flex-flow:column wrap;
-    text-align:center;
-  }
-
-  .screen1{
+  #screen1{
     justify-content: center;
   }
-  .categories {
+  #categories {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 3% 0 0 30%;
+  }
+  body{
+    font-size:15px;
   }
 
 /*SCREEN2*/
 
-  .menu {
-    font-size: 13px;
-  }
-
-  .filter{
-    font-size:11px;
-  }
-
-
-
-
-
-
-
- /* .containerFilters {
-   background:black;
-    width:38%;
-    justify-content:none;
-  }
-
-  .filters{
-    width: 35%;
-  }
-  
-  .filter{
-    width: 70%;
-    font-size:11px;
-  }
-
-  
-}*/
-
-
-
-
-@media all and (max-width: 600px){
-	.screen2{
-		flex-direction: column;
-	}
-	
+header{
+  flex-flow: column wrap;
+  height:130px;
 }
 
-/*@media screen and (min-width:600px) and (max-width:1100px) {
-    body{
-        font-size: 1.5em;
-        width: 100%;
-        height: 100%;
+#menu{
+  width:100%;
+  height: 50%;
+  justify-content:space-between;
+}
+
+.menuH {
+  margin:0;
+  
+ }
+
+#search{
+  width:100%;
+  justify-content:flex-start;
+  height: 50%;
+}
+
+#textContainer2{
+   padding:13% 0 4% 0;
+ }
+ 
+
+.pokemon{
+  border-radius: 1.65em;
+}
+}
+
+
+@media (max-width:520px){
+  /*SCREEN1*/
+  body{
+    font-size:15px;
+  }
+  #textContainer1{
+      width:70%;
     }
-     .pokemon{
-        width: 25%;
-        margin: 2%;
-        padding: 2%;   
-        font-size: 0.8em;
-    }
-}*/
+  #title1{
+    font-size: 1.25em;
+  }
+  #title2{
+    font-size: 2.3em;
+  }
+  #text1{
+    max-width: 100%;
+    padding-top: 1.25rem;
+  }
+
+  
+  /*SCREEN2*/
+	#screen2{
+    padding:0 2rem 0 2rem;
+  }
+
+  #containerFilters{
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+ }
+ .filters{
+ margin: 0 0 2rem 0;
+ }
+ #root{
+  margin-top: 0.3rem;
+   }
+
+   .icon img{
+
+    width: 60%;
+    height: 60%;
+  }
+  }
+
+
+
+
+
+
+
+

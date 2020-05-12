@@ -1,24 +1,14 @@
-//export const example = () => {
-  //return 'example';
-//};
-
 //FILTRAR POKEMON POR TIPO
-export const varType = (data,property, selectType) => {
-const resultType = [];
-  for (let i= 0; i <data.length; i++){ 
-    for (let j= 0; j <data.length; j++){ 
-      if(data[i][property][j] === selectType){
-        resultType.push(data[i])
-      }
-    }
+export const filterPokeType = (pokedata, tipo) => {
+  const newDataArray = [];
+  for (let i = 0; i < pokedata.length; i += 1) {
+    newDataArray.push(pokedata[i]);
   }
-
-return resultType
-
+  return newDataArray.filter(poke => poke.type.includes(tipo));
 };
 
+//ORDENAR NÚMERO
 
-//ORDENAR POKEMON NUMERO
 export const sortArray = (arr, condition) => {
   let arrPokemon = [];
   if (condition === 'upward') {
@@ -45,11 +35,4 @@ export const sortArray = (arr, condition) => {
     });
   }
   return arrPokemon;
-};
-
-//SEARCH
-
-export const searchText = (data, property, condition) => {
-  const searchPkm = data.filter(element => (element[property]).indexOf(condition) !== -1);
-  return searchPkm;
 };
