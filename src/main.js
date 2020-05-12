@@ -150,8 +150,8 @@ function modalPokemon(data){
     clickToModal.innerHTML="";
   });
   
-  window.onclick = function(arroz) { 
-    if (arroz.target == printModalPoke) {
+  window.onclick = function(data) { 
+    if (data.target == printModalPoke) {
       printModalPoke.style.display = "none";
       clickToModal.innerHTML="";
     }
@@ -181,9 +181,10 @@ document.getElementById('search').addEventListener('click', () => {
                               </div>
                               `;
                               showPokedex(inputName);
-                      
   }
 });
+
+
 
 
 

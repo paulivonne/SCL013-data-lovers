@@ -131,7 +131,7 @@ body{
         height: 4.3rem;
         font-weight: bold;
         text-transform: uppercase;
-        
+        position: sticky;
       }
  
       #menu{
@@ -256,12 +256,13 @@ body{
         text-transform: uppercase;
       }
 
-      #pokedexContainer{
+      /*#pokedexContainer{
+        background:green;
         display:flex;
         flex-wrap: wrap;
         justify-content: center;
         font-size:1rem;
-		  }
+		  }*/
 
       #root{
 

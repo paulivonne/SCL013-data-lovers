@@ -12,12 +12,3 @@ describe('example', () => {
 });
 
 
-describe('anotherExample', () => {
-  test('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  test('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
