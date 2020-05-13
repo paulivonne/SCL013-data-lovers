@@ -8,8 +8,7 @@ export const filterPokeType = (pokedata, tipo) => {
 };
 
 //ORDENAR NÚMERO
-
-export const sortArray = (arr, condition) => {
+export const filterPokeOrder = (arr, condition) => {
   let arrPokemon = [];
   if (condition === 'upward') {
     arrPokemon = arr.sort((a, b) => a.num - b.num);
@@ -22,7 +21,7 @@ export const sortArray = (arr, condition) => {
       } if (a.name < b.name) {
         return -1;
       }
-      return 0;
+      return 0;//
     });
   } else {
     arrPokemon = arr.sort((a, b) => {
@@ -31,17 +30,16 @@ export const sortArray = (arr, condition) => {
       } if (b.name < a.name) {
         return -1;
       }
-      return 0;
+      return 0;//
     });
   }
-  return arrPokemon;
+  return arrPokemon;//
 };
 
 //BUSCADOR
-
 export const searchPoke = (pokedata, searchName)=>{
-  const findPoke = pokedata.filter((pokemon) => {
-  return pokemon.name.includes(searchName);
+  const findPoke = pokedata.filter((pokemon) => {//
+  return pokemon.name.includes(searchName);//
  });
- return findPoke; //Busqueda terminada
+ return findPoke; //Busqueda terminada//
 };
