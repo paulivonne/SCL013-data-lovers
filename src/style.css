@@ -7,7 +7,8 @@
 
 a{
   text-decoration: none;
-  color:white;}
+  color:white;
+}
 
 body{
     font-size:16px;
@@ -120,6 +121,7 @@ body{
     color:white;
     flex-direction:column;
     padding:0 4rem 0 4rem;
+    
     
 	}
 
@@ -266,11 +268,12 @@ body{
       #root{
 
        /* background: #1ca4ff;*/
-       margin-top: 0.5rem;
+        margin-top: 2rem;
         display: flex;
         justify-content:space-evenly;
         flex-wrap:wrap; 
         justify-content: center;
+        margin-bottom:4rem;
         }
 
 
@@ -279,7 +282,7 @@ body{
         height: 11.3em; 
         box-sizing: border-box;
         border-radius: 1.5em;
-        margin:1.2em; 
+        margin:1.2em;
         background: rgba(255, 255, 255, 0.374);
         color: #2BBA99;
         font-weight: bold;
@@ -312,150 +315,34 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-flow:column wrap;
         width:100%;
-        height: 90px;
+        height: 210px;
         color:white;
         font-size:0.75rem;
+
       }
-  
-      .modalCharacters{
+
+      #encuesta{
+        border-radius:15px;
+        width:200px;
+        height:35px;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        /*background: palevioletred;*/
-    }
-
-
-
-/*________________________________
-MODAL*/
-      #modalBack{
-        position:fixed;
-        background:rgba(0, 0, 0, 0.408);
-        z-index: 1;
-        overflow: auto;
-        top: 0;
-        bottom:0;
-        left:0;
-        right:0;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-
-      #modalFront{
-        background:rgb(255, 255, 255);
-        border: 2px solid #6DFFD3;
-        border-radius:30px;
-        width:320px;
-        height: 70%;
-        display:flex;
-        justify-content:center;
-        flex-direction:column;
+        margin:40px;
+        font-size:15px;
+        font-weight: 600;
+        background: rgba(0, 151, 165, 0.516);
+        border:0.1em solid rgba(109, 255, 211, 0.995);
         
       }
 
-      #infoUp{
-        /*background:rgba(128, 253, 249, 0.381);*/
-        width: 100%;
-        height:40%;
-        display:flex;
-        flex-direction:column;
-        
-      }
+      
+  
 
-      #infoUp1{
-        /*background:rgb(4, 117, 255);*/
-        width: 100%;
-        height:50%;
-        display:flex;
-      }
 
-      .infoUpImg{
-        background:rgb(233, 135, 250);
-        width: 80%;
-        height:100%;
-        display:flex;
-        justify-content:center;
-      }
 
-      .infoUpX{
-        /*background:rgb(221, 156, 233);*/
-        width: 20%;
-        height:100%;
-        display:flex;
-        justify-content:center;
-        margin-top:10px;
-      }
-      #infoUpX img{
-        width: 40px;
-        height:40px;
-      }
-
-      #infoUp2{
-        /*background:rgb(0, 255, 247);*/
-        width: 100%;
-        height:50%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        padding: 15px 0 15px 0;
-      }
-
-      #infoUpName{
-        color: #0CA1AF;
-        font-size:30px;
-        font-weight:bold;
-      }
-
-      #infoUpNum{
-        color: #25BF88;
-        font-size:20px;
-        font-weight:bold;
-        margin-top:5px;
-      }
-
-      #infoDown{
-        /*background:rgba(128, 134, 253, 0.592);*/
-        width: 100%;
-        height:60%;
-        display:flex;
-        align-content:center;
-        flex-direction:column;
-      }
-
-      .infoTitle{
-        background:linear-gradient(90deg, #109DAB -5.26%, #2BBA99 95.96%);
-        color:white;
-        font-weight:bold;
-        height:35px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:18px;
-        text-transform:uppercase;
-      }
-
-      .infoPoke{
-        background:#F2F2F2;
-        color:#828282;
-        height:55px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-
-      #infoPokeEnd{
-        border-radius: 0 0 30px 30px;
-        background:#F2F2F2;
-        color:#828282;
-        height:55px;
-        font-size:16px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
 
 
 
