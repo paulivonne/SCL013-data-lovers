@@ -36,7 +36,7 @@ function showPokedex (pokedata){                      //se crea función que imp
                   <p class="numPoke">${pokedata[i].num}</p>
                   <img class="imgPoke" src="${pokedata[i].img}">
                 </div>`
-                   
+                
 }
 printPokedex.innerHTML = pokeCard;  
 }

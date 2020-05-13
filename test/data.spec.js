@@ -1,5 +1,5 @@
 //import { example, anotherExample } from '../src/data.js';
-import {filterPokeType, filterPokeOrder} from '../src/data.js';
+import {filterPokeType, filterPokeOrder, searchPoke} from '../src/data.js';
 
 /*describe('example', () => {
   test('is a function', () => {
@@ -10,88 +10,120 @@ import {filterPokeType, filterPokeOrder} from '../src/data.js';
     expect(example()).toBe('example');
   });
 });*/
-const arrData = [
+const arrData = [ 
+  {"num": "001",
+  "name": "Bulbasaur",
+  "type": [
+    "Grass",
+    "Poison"]
+  },
   {"num": "004",
   "name": "Charmander",
-  "type": [
-    "Fire"]
-  }, 
-  {"num": "005",
-  "name": "Charmeleon",
   "type": [
     "Fire"]
   },
-  {"num": "006",
-  "name": "Charizard",
+  {"num": "007",
+  "name": "Squirtle",
   "type": [
-    "Fire",
-    "Flying"]
-  }
-]
+    "Water"]
+  }]
 
-const arrType = [
-  {"num": "004",
-  "name": "Charmander",
-  "type": [
-    "Fire"]}, 
-  {"num": "005",
-  "name": "Charmeleon",
-  "type": [
-    "Fire"]},
-  {"num": "006",
-  "name": "Charizard",
-  "type": [
-    "Fire",
-    "Flying"]}]
+  const arrType = [
+    {"num": "004",
+    "name": "Charmander",
+    "type": [
+      "Fire"
+    ]
+  }]
 
-const arrDataOrder = [//arrA-Z
-  {"name": "Charmander"}, 
-  {"name": "Squirtle"},
-  {"name": "Metapod"},
-  ]
+  const arrOrderAz = [
+    {"num": "001",
+    "name": "Bulbasaur",
+    "type": [
+      "Grass",
+      "Poison"]
+    },
+    {"num": "004",
+    "name": "Charmander",
+    "type": [
+      "Fire"]
+    },
+    {"num": "007",
+    "name": "Squirtle",
+    "type": [
+      "Water"]
+    }]
 
-  const arrDataOrderN = [//arrZ-A
-  {"name": "Metapod"}, 
-  {"name": "Squirtle"},
-  {"name": "Charmander"},
-  ]
+    const arrOrderDes = [
+      {"num": "007",
+      "name": "Squirtle",
+      "type": [
+        "Water"]
+      },
+      {"num": "004",
+      "name": "Charmander",
+      "type": [
+        "Fire"]
+      },
+      {"num": "001",
+      "name": "Bulbasaur",
+      "type": [
+        "Grass",
+        "Poison"]
+      }]
 
-  const arrPokeData = [ //arrOriginal
-    {"name": "Charmander"}, 
-    {"name": "Metapod"},
-    {"name": "Squirtle"},
-  ]
-
+    const arrSearch = [
+        {"num": "007",
+        "name": "Squirtle",
+        "type": [
+          "Water"]
+      }]
+  
   //____________________________________________________
   //Test filtro tipo
-  describe("filterPokeType", () => {
-    test("is a function", () => {
-      expect(typeof filterPokeType).toBe("function");
-    });
 
-      test("returns Fire", () => {
-      expect(filterPokeType(arrData, "Fire")).toEqual(arrType);
-    }); 
+  describe('filterPokeType', () => {
+    test('is a function', () => {
+      expect(typeof filterPokeType).toBe('function');
+    });
+  
+    test('returns Fire for filter type', () => {
+      expect(filterPokeType(arrType,"Fire")).toEqual([{"num": "004", "name": "Charmander", "type": ["Fire"]}]);
+    });
   });
 
   //____________________________________________________
   //Test filtro ordenar
-  describe("filterPokeOrder", () => {
-    test("is a function", () => {
-      expect(typeof filterPokeOrder).toBe("function");
+
+  describe('filterPokeOrder', () => {
+    test('is a function', () => {
+      expect(typeof filterPokeOrder).toBe('function');
+    });
+  
+    test('returns A-Z', () => {//A-Z
+      expect(filterPokeOrder(arrData,"name")).toStrictEqual(arrData);
+    });
+    test('returns Z-A', () => {//Z-A
+      expect(filterPokeOrder(arrData,"name")).toEqual(arrOrderAz.reverse());
+    });
+    
+    test('returns 1-151', () => {//NºAscendente
+      expect(filterPokeOrder(arrData,"num")).toEqual(arrOrderAz);
     });
 
-      test("returns A-Z", () => {
-      expect(filterPokeOrder(arrPokeData)).toStrictEqual(arrDataOrder);
-    }); 
-      test("returns Z-A", () => {
-      expect(filterPokeOrder(arrPokeData)).toStrictEqual(arrDataOrder.reverse());
-    }); 
-    test("returns NºAscendente", () => {
-      expect(filterPokeOrder(arrDataOrderN, 1)).toStrictEqual(arrDataOrder);
-    }); 
-      test("returns NºDescendente", () => {
-      expect(filterPokeOrder(arrDataOrderN, 2)).toStrictEqual(arrDataOrderN.reverse());
+    test('returns 151-1', () => {//NºDescendente
+      expect(filterPokeOrder(arrData,"num")).toEqual(arrOrderDes);
     });
+  });
 
+   //____________________________________________________
+  //Test search
+  describe('searchPoke', () => {
+    test('is a function', () => {
+      expect(typeof searchPoke).toBe('function');
+    });
+  
+    test('returns Squirtle', () => {
+      expect(searchPoke(arrData,"Squirtle")).toEqual(arrSearch);
+    });
   });
