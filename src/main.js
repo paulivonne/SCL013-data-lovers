@@ -4,24 +4,27 @@ import { filterPokeType, filterPokeOrder, searchPoke
 //_________________________________________________________
 /*DIRIGE A PANTALLAS*/
 document.getElementById("screen2").style.display="none";
-
+//POKEDEX de categorias lleva a pantalla2
 document.getElementById("textIcon1").addEventListener("click", ()=>{
   document.getElementById("screen2").style.display="block";
   document.getElementById("screen1").style.display="none";
 });
+//INICIO de menú lleva a pantalla1
 document.getElementById("menu1").addEventListener("click", ()=>{
   document.getElementById("screen1").style.display="block";
   document.getElementById("screen1").style.display="";
+  document.getElementById("screen2").style.display="";
   document.getElementById("screen2").style.display="none";
   showPokedex(pokedata);
 });
-
+//POKEDEX de menú lleva a pantalla2
 document.getElementById("menu2").addEventListener("click", ()=>{
   document.getElementById("screen2").style.display="block";
   document.getElementById("screen2").style.display="";
   document.getElementById("screen1").style.display="none";
   showPokedex(pokedata);
 });
+
 
 //_________________________________________________________
 //IMPRIME POKEDEX EN HTML
@@ -98,5 +101,111 @@ document.getElementById('search').addEventListener('click', () => {
 
 
 
+
+
+
+
+
+
+
+//_________________________________________________________
+//IMPRIMIR PANTALLAS
+
+//click en Pókedex de categorias lleva a pantalla2 e imprime info de Pokédex
+document.getElementById('textIcon1').addEventListener('click', () => {
+document.getElementById('containerFilters').style.display = "block"; 
+ document.getElementById('rootTextFilter').innerHTML = "";
+  document.getElementById('rootTextFilter').innerHTML += `
+                            <main class="textContainer2" id="textContainerPokedex">
+                                  <h1 id="title4">POKÉDEX</h1>
+                                  <p id="text2">¿Quieres completar tu Pokédex? Conoce todos los Pokémon de la región de Kanto, filtralos por tipo y ordénalos.</p>
+                                </main>
+                                `;
+                                showPokedex(inputName);
+  });
+
+//click en Pokédex del menú imprime info de Pokédex
+  document.getElementById('menu2').addEventListener('click', () => {
+  document.getElementById('containerFilters').style.display = "block"; 
+  document.getElementById('rootTextFilter').innerHTML = "";
+  document.getElementById('rootTextFilter').innerHTML += `
+                            <main class="textContainer2" id="textContainerPokedex">
+                                  <h1 id="title4">POKÉDEX</h1>
+                                  <p id="text2">¿Quieres completar tu Pokédex? Conoce todos los Pokémon de la región de Kanto, filtralos por tipo y ordénalos.</p>
+                                </main>
+                                
+
+                                `;
+  
+  
+                                showPokedex(inputName);
+  });
+
+//click en Estadísticas del menú imprime info de Estadísticas
+  document.getElementById('menu3').addEventListener('click', () => {
+  document.getElementById('containerFilters').style.display = "none"; 
+  document.getElementById('rootTextFilter').innerHTML = "";
+  document.getElementById('rootTextFilter').innerHTML += `
+                                <main class="textContainer2"  id="textContainerStats">
+                                  <h1 id="title4">ESTADÍSTICAS</h1>
+                                  <p id="text2">Las estadísticas de tus Pokémon son muy importantes para conocer su poder en combate. Filtra y ¡descubre cuáles son los mejores!</p>
+                                </main>
+
+                                </div><!--filters-->
+                                
+                                <div class="filters" id="filterStats">
+                                  <select class="filter" name="" id="stats">
+                                    <option value="upward">Stats</option>
+                                    <option value="upward">Ataque</option>
+                                    <option value="falling">Defensa</option>
+                                    <option value="sortAz">Salud</option>
+                                    <option value="sortZa">Máx. HP</option>
+                                </select> 
+                                
+                                </div><!--filters-->
+
+                                  `;  
+  document.getElementById('root').innerHTML = "";
+  document.getElementById('root').innerHTML += `
+                                  <main class="textContainer2"  id="textContainerStats">
+                                  <h1 id="title4">ESTADÍSTICAS</h1>
+                                  <p id="text2">Las estadísticas de tus Pokémon son muy importantes para conocer su poder en combate. Filtra y ¡descubre cuáles son los mejores!</p>
+                                </main>
+  
+  
+  
+  
+  
+                                                `;
+   //aqui imprimir nueva data con filtro stats                                             
+                                 // showPokedex(inputName);
+    });
+
+  //click en Crianza del menú imprime info de Crianza 
+    document.getElementById('menu4').addEventListener('click', () => {
+    document.getElementById('containerFilters').style.display = "none"; 
+    document.getElementById('rootTextFilter').innerHTML = "";
+    document.getElementById('rootTextFilter').innerHTML += `
+                                  <main class="textContainer2"  id="textContainerCrianza">
+                                    <h1 id="title4">CRIANZA</h1>
+                                    <p id="text2">Si deseas evolucionar un Pokémon debes conocer la cantidad exacta de caramelos que necesita. Utiliza este filtro como guía las veces que quieras.</p>
+                                  </main>
+
+                                <div class="filters">
+                                  <select class="filter" name="" id="filterType">
+                                  <!--<option selected disabled >Caramelos</option>-->
+                                    <option value="allType" id="type">Caramelos</option>
+                                    <option value="Water">12</option>
+                                    <option value="Bug">25</option>
+                                    <option value="Dragon">50</option>
+                                    <option value="Electric">100</option>
+                                    <option value="Ghost">400</option>
+                                </select> 
+                                </div><!--filters-->
+                                  
+                                  `
+                                  ;
+                                  showPokedex(inputName);
+    });
 
 
