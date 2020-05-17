@@ -1,4 +1,5 @@
 //FILTRAR POKEMON POR TIPO
+
 export const filterPokeType = (pokedata, tipo) => {//se declara constante con función de filtrar por tipo
   const newDataArray = [];//  declara variable que contiene array         
   for (let i = 0; i < pokedata.length; i += 1) {//bucle que recorre la data
@@ -17,12 +18,12 @@ export const filterPokeOrder = (arr, condition) => {//se declara const que tendr
   } 
   else if (condition === 'sortAz') {//se selecciona opción A-Z
     arrPokemon = arr.sort((a, b) => {//la variable (toma name del array) = se ordenen de "a" a "b" (ordenUnicode)
-      if (a.name > b.name) {                              
-        return 1;                                        
-      } if (a.name < b.name) {                           
-        return -1;                                      
+      if (a.name > b.name) {//esta                    
+        return 1; //esta                                  
+      } if (a.name < b.name) {//esta                        
+        return -1; //esta                                  
       }
-      return 0;                                          
+      return 0; //esta                                         
     });
   } 
   else {  //si no se seleccionada ninguna de las opciones de arriba pase lo siguiente (ordena de Z-A)
@@ -41,9 +42,27 @@ export const filterPokeOrder = (arr, condition) => {//se declara const que tendr
 
 
 //BUSCADOR
+
 export const searchPoke = (pokedata, searchName)=>{//se declara constante con función de buscar pokemon
   const findPoke = pokedata.filter((pokemon) => {//se declara constante de la data filtrada (desde toda la data)
   return pokemon.name.includes(searchName);//retorna (desde toda la data) el nombre incluyendo ?? 
  });
  return findPoke; //Busqueda terminada
 };
+
+
+
+
+// FUNCIÓN FILTRAR POR HUEVOS
+export const filterEgg = (pokedata,typePoke) => {
+  const result = pokedata.filter((pokemon) => {
+  return pokemon.egg.includes(typePoke);
+  });
+  return result;
+};
+
+// FUNCIÓN FILTRAR POR CARAMELOS
+export const filterCandy = (pokedata, typeCandy) => {
+  return pokedata.filter(poke => poke.candy_count == typeCandy);
+};
+
