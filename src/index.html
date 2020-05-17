@@ -8,9 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-		<section id="screen1">
-      
+ 
+    <header>
+      <div id="menu">
+      <div class="menuH" id="menu1" >inicio</div>
+      <div class="menuH" id="menu2">pokedex</div>
+      <div class="menuH" id="menu3">caramelos</div>
+      <div class="menuH" id="menu4">huevos</div>
+    </div> <!--menu-->
+    </header>
 
+<!--SCREEN1-->
+		<section id="screen1">
       <div id="imgContainer"><img src="http://imgfz.com/i/R7eDH3b.png"></div>
       <div id="textContainer1">
 				<h1 id="title1">Bienvenid@s a</h1>
@@ -19,60 +28,20 @@
         <h1 id="title3">ELIGE UNA CATEGORÍA</h1>
 
         <div id="categories">
-          <div class="category1">
-            <div class="icon" id="icon1">
-              <img src="http://imgfz.com/i/vTjmB4F.png">
-            </div><!--icon1-->
-            <div class="textIcon" id="textIcon1">POKÉDEX</div>
-          
-          </div><!--category1-->
-
-          <div class="category1">
-            <div class="icon" id="icon2">
-              <img src="http://imgfz.com/i/X1k4HjM.png">
-            </div><!--icon2-->
-            <div class="textIcon" id="textIcon2">ESTADÍSTICAS</div>
-            </div> <!--category2-->
-
-          <div class="category1">
-            <div class="icon" id="icon3">
-              <img src="http://imgfz.com/i/hCQSlZY.png">
-            </div><!--icon3-->
-            <div class="textIcon" id="textIcon3">CRIANZA</div>
-          </div><!--category1-->
-
-        </div><!--categories-->
-      </div><!--textContainer1-->
-    </section><!--pantalla1-->
-
-    <!--Screen2-->
-		<section class="screenBack" id="screen2">
-      	<header>
-        <div id="menu">
-				<div class="menuH" id="menu1">inicio</div>
-        <div class="menuH" id="menu2">pokedex</div>
-        <div class="menuH" id="menu3">estadísticas</div>
-        <div class="menuH" id="menu4">crianza</div>
-      </div> <!--menu-->
-      <div id="searcher">
-        <input type="text" id="searchBar" placeholder="Busca a tu Pokémon">
-        <div id="search">
-          <img src="http://imgfz.com/i/KNxmd9V.png">
-        </div>
-      </div><!--search-->
-      </header>
-      
-      <div id="rootTextFilter">
       </div>
-		<!--<div id="textContainer2">
+    </section>
+
+    <!--SCREEN2-->
+		<section class="screenBack" id="screen2">
+     
+		<div class="textContainer">
 				<h1 id="title4">POKÉDEX</h1>
 				<p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
-      </div>-->
+      </div>
 
-      <div id="containerFilters">
+      <div id="containerFilters" class="containerFilters">
         <div class="filters">
           <select class="filter" name="" id="filterType">
-          <!--<option selected disabled >Tipo</option>-->
             <option value="allType" id="type">Tipo</option>
             <option value="Water">Agua</option>
             <option value="Bug">Bicho</option>
@@ -102,19 +71,87 @@
         </select> 
         
         </div><!--filters-->
+        
+       <div id="searchContainer">
+          <div id="contenedorInput">
+          <input type="text" id="searchBar" placeholder="Busca a tu Pokémon">
+        </div>
+          <div id="searchIcon">
+            <img src="http://imgfz.com/i/KNxmd9V.png">
+          </div>
+        </div>
+
       </div><!--containerFilters-->
      
     <!--aqui se imprime-->
     <div id="root"></div>
-    <footer>
-    <a href=https://forms.gle/PFdK6d321wQkQ2a66 target=”_blank” id="encuesta"> Ayúdanos a mejorar</a> 
-    <p>© 2020 Paulina & Alejandra</p>
-    </footer>
     </section>
 
-    
+
+
+    <!--SCREEN3-->
+    <section class="screenBack" id="screen3">
+      <div class="textContainer">
+				<h1 id="title4">CARAMELOS</h1>
+				<p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
+      </div>
    
-<script src="main.js" type="module"></script>    
+          <div id="containerFilters" class="containerFilters">
+            <div class="filters">
+              <select class="filter" id="selectPokeCandy">
+                <option value="allCandy" selected>Caramelos</option>
+                <option value="12">12</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="400">400</option>
+              </select>
+            </div><!--filters-->
+          </div><!--containerFilters-->
+
+        <div id="rootCandy"></div>
+
+      </section>
+        <!--SCREEN4-->
+
+
+
+
+
+
+
+
+
+
+    
+     <section class="screenBack" id="screen4">
+      <div class="textContainer">
+				<h1 id="title4">HUEVOS</h1>
+				<p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
+     
+
+    <div id="containerFilters" class="containerFilters">
+      <div class="filters">
+        <select class="filter" id="selectPokeEgg">
+          <option value="allEggs" selected>Huevos</option>
+          <option value="2 km">2km</option>
+          <option value="5 km">5km</option>
+          <option value="10 km">10km</option>
+        </select>
+      </div><!--filters-->
+    </div><!--containerFilters-->
+
+
+    <div id="rootEggs"></div>
+    </section>
+
+    <footer id="footer">
+      <a href=https://forms.gle/PFdK6d321wQkQ2a66 target=”_blank” id="encuesta"> Ayúdanos a mejorar</a> 
+      <p>© 2020 Paulina & Alejandra</p>
+      </footer>   
+   
+<script src="main.js" type="module"></script>  
+
 </body>
 
 </html>

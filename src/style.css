@@ -21,11 +21,12 @@ body{
     background-attachment: contain;
     background-size: cover;
     display: flex;
+    padding-top:100px;
     height: 100vh;
 	}
 
 	    #imgContainer{
-      width:50%;
+      width:46%;
       display:flex;
       justify-content:flex-end;
       }
@@ -40,7 +41,7 @@ body{
 		  /*	background: #f07b3f;*/
         color:white;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         justify-content: center;
         width:50%;
         padding:3%;
@@ -122,26 +123,30 @@ body{
     flex-direction:column;
     padding:0 4rem 0 4rem;
     
-    
 	}
 
       header{
-       /*background-color:#dfa88c;*/
+       background-color:rgb(1, 146, 159);
+       width:100%;
+       color:white;
         display: flex;
         flex-flow: row nowrap;
         max-width:81.3rem;
         height: 4.3rem;
         font-weight: bold;
         text-transform: uppercase;
+        position:fixed;
       }
  
       #menu{
        /*background:rgb(140, 215, 210);*/
         font-size:0.8em;
-        width: 70%;
+        width: 100%;
         display: flex;
         flex-wrap:wrap;
-        align-items: flex-end;
+        align-items: center;
+        padding-left:50px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.125);
        
       }
 
@@ -152,28 +157,34 @@ body{
 
       .menuH:hover{
         color: #10ff90;
+        font-size: 1.5em;
+
       }
 
-      #searcher{
+      #searchContainer{
         /*background:rgb(208, 215, 134);*/
         display:flex;
         align-items:flex-end;
-        width:30%;
+        width:35%;
         justify-content: flex-end;
+        height:35px;
        
       }
+
+      
    
-      #searcher input{
-        height: 2.5em;
-        width: 20em;
-        border-radius:1.25em;
+      #searchContainer input{
+        height: 2.7em;
+        width: 19em;
+        border-radius:1.6em;
         background: rgba(255, 255, 255, 0.392);
         color:white;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: bold;
         text-transform: uppercase;
         text-align: center;
         margin-right: 10px;
+        
       } 
 
       *::-webkit-input-placeholder {
@@ -184,49 +195,41 @@ body{
         text-align: center;
       }
 
-      #search{
+      #searchIcon{
        /*background:red;*/
         cursor: pointer;
         margin:0 0 0 0; 
       }
 
-     #search img{
+     #searchIcon img{
        width:20px;
      }
 
-     #search img:hover{
-      background:url(http://imgfz.com/i/MzfHFZ9.png);
-      background-repeat: no-repeat;
-      z-index:1;
-
      
 
-    }
-     
-
-      .textContainer2{
+      .textContainer{
           /*background: #35495e;*/
-          padding:7% 0 4% 0;
+          padding:150px 0 4% 0;
           display: flex;
           flex-flow: column wrap;
           width:100%;
         
         }
 
-      #title4{
+      .categoryTitle{
         font-size:2.2em;
       }
 
-      #text2{/*texto pokedex*/
+      .text2{/*texto pokedex*/
        margin-top:1.5rem;
        font-size: 0.9em;
       
       }
 
-      #containerFilters{
-      /*background: rosybrown;*/
+      .containerFilters{
+       /*background: rosybrown;*/
         display:flex;
-        width:30rem;
+        width:70%;
         text-transform: uppercase;
         flex-wrap:wrap;
        }
@@ -266,23 +269,35 @@ body{
         justify-content:space-evenly;
         flex-wrap:wrap; 
         justify-content: center;
-        margin-bottom:4rem;
+        padding-bottom:4rem;
         }
+
+        #rootStats{
+
+          /*background: #1ca4ff;*/
+           margin-top: 2rem;
+           display: flex;
+           justify-content:space-evenly;
+           flex-wrap:wrap; 
+           justify-content: center;
+           padding-bottom:4rem;
+           }
 
 
       .pokemon{
         width: 11.3em;
-        height: 11.3em; 
+        height: 16em; 
         box-sizing: border-box;
         border-radius: 1.5em;
         margin:1.2em;
         background: rgba(255, 255, 255, 0.374);
         color: #2BBA99;
         font-weight: bold;
-        cursor: pointer;
         text-align:center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.183);
       
       }
+
         
       .imgPoke{
         width:60%;
@@ -302,15 +317,31 @@ body{
         font-size:1rem;
         
       }
-
-      #rootTextFilter{
-        /*background:rgb(254, 165, 165);*/
-        width: 60%;
-        height: 220px;
-
+      .typePoke{/*numero pokemon*/
+        color: white;
+        font-size:9px;
+        font-weight:bold;
+        margin-top:20px;
+        font-size:1rem;
+        background:rgb(154, 145, 208);
       }
 
       
+
+      #rootEggs{
+        margin-top: 0;
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap:wrap; 
+        justify-content: center;
+        margin-bottom:4rem;
+        width:100%;
+      }
+
+
+
+      
+  
 
       #textContainerPokedex{
          /*background:rgb(220, 115, 115);*/
@@ -322,12 +353,102 @@ body{
         margin-bottom: 8px;
       }
 
-      #textContainerCrianza{
-         /*background:rgb(220, 115, 115);*/
+      #textContainerEggs{
+        /*background:rgb(220, 115, 115);*/
         margin-bottom: 8px;
       }
-
       
+      #filterEggs{
+        /*background:rgb(182, 137, 210);*/
+        width:60%;
+        
+      }
+
+      .filterEggImg{
+        width:200px;
+        height:200px;
+      }
+
+
+      /*SCREEN4*/
+      #rootCandy{
+        margin-top: 2rem;
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap:wrap; 
+        padding-bottom:4rem;
+}
+
+.pokemonCandy{
+        width: 70%;
+        box-sizing: border-box;
+        border-radius: 1.5em;
+        margin:1.2em;
+        background: rgba(255, 255, 255, 0.374);
+        color: #2BBA99;
+        display:flex;
+        flex-flow:row wrap;
+        text-align:center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.183);
+
+}
+
+.imgPoke{
+        width:50%;
+        /*background:rgb(112, 162, 167);*/
+      }
+
+     .nameCandy{ /*nombre pokemon*/
+        width:30%;
+        background: white;
+        border-radius: 1.5em 0  0 1.5em;
+        font-size:1.1rem;
+        display:flex;
+        flex-flow:column wrap;
+        align-text:center;
+        justify-content:center;
+        align-items:center;
+        
+      }
+
+      .numCandy{/*numero pokemon*/
+        width:22.5%;
+        color: white;
+        font-size:1rem;
+        display:flex;
+        flex-flow:column wrap;
+        align-text:center;
+        justify-content:center;
+        align-items:center;
+        
+        
+      }
+      .candyPoke{/*numero pokemon*/
+        width:22.5%;
+        color: white;
+        font-size:1rem;
+        /*background:rgb(238, 238, 238);*/
+        display:flex;
+        flex-flow:column wrap;
+        align-text:center;
+        justify-content:center;
+        align-items:center;
+        border-left: thick solid #ffffff92;
+      }
+
+      .evolution{
+        width:22.5%;
+        color: white;
+        /*background:rgb(238, 238, 238);*/
+        display:flex;
+        flex-flow:column wrap;
+        align-text:center;
+        justify-content:center;
+        align-items:center;
+        border-left: thick solid #ffffff92;
+
+      }
+
 
 
 
@@ -336,16 +457,21 @@ body{
 
 
       footer{
-        /*background: #0197A5;*/
+        background: #25BF88;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-flow:column wrap;
         width:100%;
-        height: 210px;
+        height: 120px;
         color:white;
         font-size:0.75rem;
+      }
 
+      footer p{
+        /*background: rgb(134, 202, 203);*/
+        margin-bottom:25px;
+        
       }
 
       #encuesta{
@@ -355,7 +481,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin:40px;
+        margin-bottom:30px;
         font-size:15px;
         font-weight: 600;
         background: rgba(0, 151, 165, 0.516);
@@ -420,13 +546,13 @@ header{
   
  }
 
-#searcher{
+#searchContainer{
   width:100%;
   justify-content:flex-start;
   height: 50%;
 }
 
-#textContainer2{
+.textContainer{
    padding:13% 0 4% 0;
  }
  
@@ -462,7 +588,7 @@ header{
     padding:0 2rem 0 2rem;
   }
 
-  #containerFilters{
+  .containerFilters{
     flex-flow: column wrap;
     justify-content: space-between;
     width:100%;
