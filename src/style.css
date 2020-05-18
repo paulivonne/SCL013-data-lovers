@@ -4,7 +4,6 @@
 	box-sizing: border-box;
   font-family: 'Montserrat';
 }
-
 a{
   text-decoration: none;
   color:white;
@@ -12,22 +11,23 @@ a{
 html {
   scroll-behavior: smooth;
 }
-
 body{
     font-size:16px;
     background:#25BF88;
   }
 
+/*_____________________________________*/
 /*SCREEN1*/
-  #screen1{
-    background:url(http://imgfz.com/i/lQEs3Vq.png);
-    background-position: center;
-    background-attachment: contain;
-    background-size: cover;
-    display: flex;
-    padding-top:100px;
-    height: 100vh;
-	}
+
+    #screen1{
+      background:url(http://imgfz.com/i/lQEs3Vq.png);
+      background-position: center;
+      background-attachment: contain;
+      background-size: cover;
+      display: flex;
+      padding-top:100px;
+      height: 100vh;
+    }
 
 	    #imgContainer{
       width:46%;
@@ -42,37 +42,34 @@ body{
         }
 
 		  #textContainer1{
-		  /*	background: #f07b3f;*/
         color:white;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        width:50%;
+        width:45%;
         padding:3%;
       }
  
-      #title1{/*bienvenidos*/
+      #title1{
         font-size: 1.25em;
         font-weight: normal;
         text-transform: uppercase;
       }
 
-      #title2{/*pokekanto*/
+      #title2{
         font-size: 3.1em;
         font-weight: 900;
       }
 
       #text1{
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: normal;
         width: 100%;
         max-width:90%;
         padding-top: 1.25rem;
       }
 
-      
-
-     #go{
+      #go{
         margin-top: 3rem;
         border-radius:18px;
         width:100px;
@@ -93,35 +90,28 @@ body{
         font-weight: 900;
         color:#2BBA99;
         cursor:pointer;
-        
       }
-     
-
-	    
-
-    
- /*SCREEN 2*/
+   
+/*_____________________________________*/
+/*SCREEN2*/
  
 	.screenBack{
-		
 		display: flex;
     color:white;
     flex-direction:column;
     padding:0 4rem 0 4rem;
-    
   }
   
   #screen2{
-    background: linear-gradient(360deg, #25BF88 0%, #0097A5 70.31%);
+    background:linear-gradient(360deg, #25BF88 0%, #0097A5 70.31%);
   }
 
       header{
-       background-color:rgb(1, 146, 159);
-       width:100%;
+        background-color:rgb(1, 146, 159);
+        width:100%;
         color:white;
         display: flex;
         flex-flow: row nowrap;
-        max-width:81.3rem;
         height: 4.3rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -129,7 +119,6 @@ body{
       }
  
       #menu{
-       /*background:rgb(140, 215, 210);*/
         font-size:0.8em;
         width: 100%;
         display: flex;
@@ -137,7 +126,6 @@ body{
         align-items: center;
         padding-left:50px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.125);
-       
       }
 
       .menuH {
@@ -148,57 +136,46 @@ body{
       .menuH:hover{
         color: #10ff90;
         font-size: 1.5em;
-
       }
 
-   
       .textContainer{
-          /*background: #35495e;*/
-          padding:120px 0 4% 0;
-          display: flex;
-          flex-flow: row wrap;
-          width:100%;
-        
+        padding:120px 0 4% 0;
+        display: flex;
+        flex-flow: row wrap;
+        width:100%;
         }
 
-
-      #iconTitle{
+      .iconTitle{
         width:80px;
         height:80px;
-       /*background:rgb(255, 152, 152);*/
-       margin-top:20px;
+        margin-top:20px;
       }
 
-      #contTextTitle{
-       /*background:rgb(118, 209, 225);*/
+      .contTextTitle{
          width:60%;
          padding-left:15px;
        }
 
-      #title4{/*texto pokedex*/
-       /* background:rgb(123, 118, 225);*/
+      .title4{
         margin-top:1.2rem;
         font-size: 2.5em;
         margin-right:2px;
-       
        }
 
-      #text2{/*texto pokedex*/
+      .text2{
        font-size: 1em;
        margin-top:13px;
-      
       }
 
       .containerFilters{
-       /*background: rosybrown;*/
-       margin-top:20px;
+        margin-top:20px;
         display:flex;
         width:70%;
         text-transform: uppercase;
         flex-wrap:wrap;
        }
 
-      .filters{/*borde filtros*/
+      .filters{
         margin: 0 2rem 0 0;
         border-radius:1.8em;
         display:inline-block;
@@ -207,7 +184,6 @@ body{
         width: 10rem;
         cursor: pointer;
         text-align:center;
-        
       }
 
       .filter{
@@ -223,18 +199,56 @@ body{
         font-weight: bold;
         text-transform: uppercase;
       }
-
+      
+      .containerDown{
+        display:flex;
+        justify-content: flex-end;
+        width:100%;
+      }
+    
+      .down img{
+        width:50%;
+      }
+    
+      .down{
+        margin-right:0;
+        display:flex;
+        justify-content: flex-end;
+      }
+    
+      .down img:hover{
+        background: url(http://imgfz.com/i/ai2O7Yh.png);
+        background-repeat:no-repeat;
+      }
+     
+      .containerUp{
+         display:flex;
+         justify-content: flex-end;
+         width:100%;
+      } 
+    
+      .up img{
+        width:50%;
+      }
+    
+      .up{
+        margin-right:0;
+        display:flex;
+        justify-content: flex-end;
+      }
+      
+      .up img:hover{
+        background: url(http://imgfz.com/i/cN9naVh.png);
+        background-repeat:no-repeat;
+      }
 
       #root{
-
         display: flex;
         justify-content:space-evenly;
         flex-wrap:wrap; 
         justify-content: center;
         padding-bottom:4rem;
         }
-
-
 
       #pokemon{
         width: 14em;
@@ -243,93 +257,56 @@ body{
         border-radius: 1.5em;
         margin:1.2em;
         background: linear-gradient(90deg, #109DAB -5.26%, #2BBA99 95.96%);
-        color:  #0097A5 ;
+        color: #0097A5 ;
         font-weight: bold;
         text-align:center;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.183);
         display: flex;
         flex-flow: column wrap;
-      
       }
 
-      #imgPoke{
-        width:60%;
-      }
-
-     #namePoke{ /*nombre pokemon*/
+      #namePoke{ 
         background: white;
         border-radius: 1.4rem 1.4rem 0 0;
         padding: 0.4em 0.4em 0 0.4em;
         font-size:1.1rem;
-        height:190px;
+        height:200px;
         width: 100%;
       }
 
-      #numPoke{/*numero pokemon*/
+      #numPoke{
         color: #0097A5 ;
         font-weight: normal;
         margin:0.4rem;
         font-size:1rem;
-        
       }
 
-    
+      #imgPoke{
+        width:65%;
+      }
+
       .typeTitle{
-        color: #0097A5 ;
-        background:  rgb(255, 255, 255);
+        font-weight:900;
         font-size:12px;
-        height:20px;
-        display:flex;
-        align-items:center;
-        justify-content: center;
+        margin-bottom:10px;
       }
 
       #typePoke{
-        color: rgb(255, 255, 255);
         font-size:16px;
         font-weight:bold;
-        margin-top:10px;
-        height:32px;
-        display:flex;
-        align-items:center;
-        justify-content: center;
+        margin-bottom: 4px;
       }
-     
 
+      #typeCont{
+        color: white;
+        margin-top:0px;
+      }
+
+/*_____________________________________*/
+/*SCREEN3*/
       
-  
-
-   
-/*___________________________________________________*/
-      #textContainerStats{
-        /*background:rgb(220, 115, 115);*/
-        margin-bottom: 8px;
-      }
-
-      #textContainerEggs{
-        /*background:rgb(220, 115, 115);*/
-        margin-bottom: 8px;
-      }
-      
-      #filterEggs{
-        /*background:rgb(182, 137, 210);*/
-        width:60%;
-        
-      }
-
-      .filterEggImg{
-        width:200px;
-        height:200px;
-      }
-
-
-      /*SCREEN3 CARAMELOS*/
-
-     
-
       #screen3{
-        background: linear-gradient(360deg, #25BF88 0%, rgb(97, 120, 211) 70.31%);
-        
+        background: linear-gradient(360deg, #25BF88 0%, rgb(97, 120, 211) 70.31%); 
       }
       
       #rootCandy{
@@ -337,13 +314,10 @@ body{
         justify-content:space-evenly;
         flex-wrap:wrap; 
         padding-bottom:4rem;
-}
-
-
-
+      }
 
       .pokemonCandy{
-        width: 75%;
+        width: 70%;
         height:150px;
         box-sizing: border-box;
         border-radius: 2em;
@@ -354,15 +328,13 @@ body{
         flex-flow:row wrap;
         text-align:center;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.183);
-
-}
+      }
 
       .imgPokeCandy{
         width:45%;
-        /*background:rgb(112, 162, 167);*/
       }
 
-     .nameCandy{ /*nombre pokemon*/
+     .nameCandy{
         width:30%;
         background: white;
         border-radius: 1.8em 0  0 1.8em;
@@ -371,10 +343,9 @@ body{
         flex-flow:column wrap;
         justify-content:center;
         align-items:center;
-        
       }
 
-      .numCandy{/*numero pokemon*/
+      .numCandy{
         width:22.5%;
         color: white;
         font-size:1.1rem;
@@ -382,48 +353,41 @@ body{
         flex-flow:column wrap;
         justify-content:center;
         align-items:center;
-        
-        
       }
-      .candyPoke{/*numero pokemon*/
+
+      .candyPoke{
         width:22.5%;
         color: white;
         font-size:1.1rem;
-        /*background:rgb(238, 238, 238);*/
         display:flex;
         flex-flow:column wrap;
         justify-content:center;
         align-items:center;
-        border-left: 3px solid #ffffff92;
-        border-right: 3px solid #ffffff92;
-        
+        border-left: 3px solid rgba(122, 139, 216, 0.625);
+        border-right: 3px solid rgba(122, 139, 216, 0.625); 
       }
 
       .evolution{
         width:22.5%;
         font-size:1.1rem;
         color: white;
-        /*background:rgb(238, 238, 238);*/
         display:flex;
         flex-flow:column wrap;
         justify-content:center;
         align-items:center;
-       
-
       }
 
       #candy{
-        width:20%;
+        width:23%;
         margin-bottom: 8px;
       }
 
-
-      /*SCREEN4 EGGS*/
-
-
-      #screen4{
+/*_____________________________________*/
+/*SCREEN4*/
+      
+    #screen4{
         background: linear-gradient(360deg, #25BF88 0%, rgb(62, 149, 215) 70.31%);
-      }
+    }
 
       #rootEggs{
         display: flex;
@@ -434,9 +398,7 @@ body{
         width:100%;
         padding-bottom:4rem;
       }
-      
-
-
+    
       #pokemonEgg{
         width: 200px;
         height: 330px; 
@@ -451,8 +413,14 @@ body{
       
       }
 
+      #numPokeEgg{
+        margin-top:10px;
+        color: rgb(62, 149, 215);
+        font-weight: normal;
+        font-size:1rem;
+      }
 
-     #namePokeEgg{ /*nombre pokemon*/
+      #namePokeEgg{
         background: white;
         border-radius: 3.8rem 3.8rem 0 0;
         padding: 20px 0.4em 0 0.4em;
@@ -463,21 +431,13 @@ body{
         height:55%;
       }
 
-      #namePokeEgg img{
-        width:50%;
-      }
-
-      #numPokeEgg{/*numero pokemon*/
-        margin-top:10px;
-        color: rgb(62, 149, 215);
-        font-weight: normal;
-        font-size:1rem;
-        
-      }
-
       #egg{
         margin-top:15px;
         width:30%;
+      }
+
+      #namePokeEgg img{
+        width:50%;
       }
 
       #eggPoke{
@@ -486,20 +446,11 @@ body{
         font-size:16px;
         font-weight:bold;
         height:32px;
-
       }
      
+/*_____________________________________*/
+/*FOOTER*/
 
-
-
-
-
-
-
-
-
-
-      /*FOOTER*/
       footer{
         background: #25BF88;
         text-align: center;
@@ -507,13 +458,10 @@ body{
         font-size:0.75rem;
         width:100%;
         height: 150px;
-        
       }
 
       footer p{
-        /*background: rgb(134, 202, 203);*/
         margin-top:75px;
-        
       }
 
       #test{
@@ -528,34 +476,12 @@ body{
         background: rgba(0, 151, 165, 0.516);
         border:0.1em solid rgba(109, 255, 211, 0.995);
         cursor:pointer;
-
-
-
       }
 
-       
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*____________________________________________________
-MEDIA*/
-@media (max-width:768px){
+     
+/*____________________________________________________*/
+/*MEDIA*/
+@media (max-width:800px){
 /*SCREEN1*/
   #imgContainer{
     display:none;
@@ -563,52 +489,43 @@ MEDIA*/
   #screen1{
     justify-content: center;
   }
-  #categories {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
   body{
     font-size:15px;
   }
 
+  #textContainer1{
+    width:65%;
+  }
 /*SCREEN2*/
-
-header{
+ .containerFilters{
   flex-flow: column wrap;
-  height:130px;
-}
-
-#menu{
+  justify-content: space-between;
   width:100%;
-  height: 50%;
-  justify-content:space-between;
+  align-items: center;
 }
 
-.menuH {
-  margin:0;
-  
- }
+ .filters{
+  margin: 0 0 2rem 0;
+}
 
-#searchContainer{
+ .evolution{
+  font-size:0.9rem;
+}
+
+.containerDown{
   width:100%;
-  justify-content:flex-start;
-  height: 50%;
+  height:100%;
 }
 
-.textContainer{
-   padding:13% 0 4% 0;
- }
- 
-
-.pokemon{
-  border-radius: 1.65em;
+.containerUp{
+   width:100%;
+   height:100%;
 }
 }
 
-
+/*__________________________________*/
 @media (max-width:520px){
-  /*SCREEN1*/
+/*SCREEN1*/
   body{
     font-size:15px;
   }
@@ -625,78 +542,96 @@ header{
     max-width: 100%;
     padding-top: 1.25rem;
   }
-
-  
-  /*SCREEN2*/
+/*SCREEN2*/
+  #menu{
+   font-size:0.6em;
+   width: 100%;
+   display: flex;
+   flex-wrap:wrap;
+   align-items: center;
+   padding-left:50px;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.125);
+ }
+ .menuH {
+  cursor: pointer;
+  margin-right:30px;
+ }
 	.screenBack{
     padding:0 2rem 0 2rem;
   }
-
+  .textContainer{
+    padding:30% 0 6% 0;
+  }
   .containerFilters{
     flex-flow: column wrap;
     justify-content: space-between;
     width:100%;
     align-items: center;
  }
- .filters{
- margin: 0 0 2rem 0;
+  .filters{
+    margin: 0 0 2rem 0;
  }
- #root{
-  margin-top: 0.3rem;
+  #root{
+    margin-top: 0.3rem;
+  }
+   .pokemonCandy{
+    width: 210px;
+    height: 19em;
+    display:flex;
+    flex-direction:column ;
+  }
+  .imgPokeCandy{
+    width:45%;
+  }
+ .nameCandy{ 
+    width:100%;
+    height: 35%;
+    border-radius: 1.8em 1.8em  0 0;
+    font-size:1rem;
+    padding:0 10px 0 4px;
+  }
+  .numCandy{
+    width:100%;
+    font-size:1rem;
+    text-align: center;
+    margin-top:10px;
+  }
+  .candyPoke{
+    margin-top:10px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    font-size:1rem;
+    border-left: 0;
+    border-right: 0;
+    border-top: 3px solid rgba(122, 139, 216, 0.625);
+    border-bottom: 3px solid rgba(122, 139, 216, 0.625); 
+  }
+  .evolution{
+    margin-top:10px;
+    width:100%;
+    font-size:1rem;
+  }
+  #candy{
+    width:10%;
+    margin:17px 10px 17px 8px;
+  }
+  .textContainer{
+    padding:120px 0 4% 0;
+    width:90%;
+    }
+  .iconTitle{
+    width:60px;
+    height:60px;
+  }
+  .contTextTitle{
+     width:80%;
+     padding-left:15px;
    }
-
-   .icon img{
-
-    width: 60%;
-    height: 60%;
+  .title4{
+    font-size: 2.2em;
+   }
+  .text2{
+   font-size: 0.9em;
   }
-  }
-
-  .containerDown{
-    display:flex;
-    justify-content: flex-end;
-    width:104%;
-  }
-
-  .down img{
-    width:50%;
-  }
-
-  .down{
-    margin-right:0;
-    display:flex;
-    justify-content: flex-end;
-  }
-
-  .down img:hover{
-    background: url(http://imgfz.com/i/ai2O7Yh.png);
-    background-repeat:no-repeat;
-  }
- 
-
-
-  /**/
-  .containerUp{
-    /* background: rgb(135, 135, 255);*/
-     display:flex;
-     justify-content: flex-end;
-     width:104%;
-   } 
-
-  .up img{
-    width:50%;
-  }
-
-  .up{
-    /*background: #25BF88;*/
-    margin-right:0;
-    display:flex;
-    justify-content: flex-end;
-  }
-
-  
-  .up img:hover{
-    background: url(http://imgfz.com/i/cN9naVh.png);
-    background-repeat:no-repeat;
-  
   }

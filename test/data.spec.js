@@ -1,5 +1,5 @@
 //import { example, anotherExample } from '../src/data.js';
-import {filterPokeType, filterPokeOrder, searchPoke} from '../src/data.js';
+import {filterPokeType, filterPokeOrder, filterEgg, filterCandy} from '../src/data.js';
 
 /*describe('example', () => {
   test('is a function', () => {
@@ -54,7 +54,8 @@ const arrData = [
       "Water"]
     }]
 
-    const arrOrderDes = [
+    
+    /*const arrOrderDes = [
       {"num": "007",
       "name": "Squirtle",
       "type": [
@@ -71,16 +72,30 @@ const arrData = [
         "Grass",
         "Poison"]
       }]
+      */
+      
 
-    const arrSearch = [
-        {"num": "007",
-        "name": "Squirtle",
-        "type": [
-          "Water"]
+      const arrEgg = [
+        {"name": "Charmander",
+        "num": "004",
+        "egg": "2 km"
       }]
+
+      const arrCandy = [
+        {"name": "Squirtle",
+        "num": "007",
+        "candy_count": 25,
+        "next_evolution": [{
+          "name": "Wartortle"
+        }]
+      }]
+
+
+
+
   
   //____________________________________________________
-  //Test filtro tipo
+  //1. Test filtro tipo
 
   describe('filterPokeType', () => {
     test('is a function', () => {
@@ -93,7 +108,7 @@ const arrData = [
   });
 
   //____________________________________________________
-  //Test filtro ordenar
+  //2. Test filtro ordenar
 
   describe('filterPokeOrder', () => {
     test('is a function', () => {
@@ -101,29 +116,55 @@ const arrData = [
     });
   
     test('returns A-Z', () => {//A-Z
-      expect(filterPokeOrder(arrData,"name")).toStrictEqual(arrData);
+      expect(filterPokeOrder(arrData,"name")).toEqual(arrData);
     });
     test('returns Z-A', () => {//Z-A
       expect(filterPokeOrder(arrData,"name")).toEqual(arrOrderAz.reverse());
     });
     
     test('returns 1-151', () => {//NºAscendente
-      expect(filterPokeOrder(arrData,"num")).toEqual(arrOrderAz);
+      expect(filterPokeOrder(arrData,"num")).toEqual(arrData);
     });
 
     test('returns 151-1', () => {//NºDescendente
-      expect(filterPokeOrder(arrData,"num")).toEqual(arrOrderDes);
+      expect(filterPokeOrder(arrData,"num")).toEqual(arrData.reverse());
+    });
+
+    test('returns 1-151', () => {//ordenar por defecto
+      expect(filterPokeOrder(arrData,"num")).toEqual(arrData);
     });
   });
 
-   //____________________________________________________
-  //Test search
-  describe('searchPoke', () => {
+
+//____________________________________________________
+//3. Test FUNCIÓN FILTRAR POR HUEVOS
+
+  describe('filterEgg', () => {
     test('is a function', () => {
-      expect(typeof searchPoke).toBe('function');
+      expect(typeof filterEgg).toBe('function');
     });
   
-    test('returns Squirtle', () => {
-      expect(searchPoke(arrData,"Squirtle")).toEqual(arrSearch);
+    test('returns 2 km for filter egg', () => {
+      expect(filterEgg(arrEgg,"2 km")).toEqual([{"name": "Charmander", "num": "004", "egg": "2 km"
+
+      }]);
     });
   });
+
+  //____________________________________________________
+//3. Test FUNCIÓN FILTRAR POR HUEVOS
+
+describe('filterCandy', () => {
+  test('is a function', () => {
+    expect(typeof filterCandy).toBe('function');
+  });
+
+  test('returns 25 for filter Candy', () => {
+    expect(filterCandy(arrCandy,"25")).toEqual([{"name": "Squirtle", "num": "007", "candy_count": 25, "next_evolution": [{
+      "name": "Wartortle"
+    }]
+
+    }]);
+
+  });
+});

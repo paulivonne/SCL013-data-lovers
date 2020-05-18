@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>Pokekanto Prueba</title>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/ico" href="http://imgfz.com/i/XPJpBHE.png" />
+	<title>POKEKANTO</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -11,43 +12,40 @@
  
     <header>
       <div id="menu">
-      <div class="menuH" id="menu1" >inicio</div>
-      <div class="menuH" id="menu2">pokedex</div>
-      <div class="menuH" id="menu3">caramelos</div>
-      <div class="menuH" id="menu4">huevos</div>
-    </div> <!--menu-->
+        <div class="menuH" id="menu1" >inicio</div>
+        <div class="menuH" id="menu2">pokedex</div>
+        <div class="menuH" id="menu3">caramelos</div>
+        <div class="menuH" id="menu4">huevos</div>
+      </div>
     </header>
 
 <!--SCREEN1-->
 		<section id="screen1">
-    
-
       
       <div id="imgContainer"><img src="http://imgfz.com/i/R7eDH3b.png"></div>
-      <div id="textContainer1">
-				<h1 id="title1">Bienvenid@s a</h1>
-        <h1 id="title2">POKEKANTO</h1>
-        <p id="text1">Aquí podrás encontrar la información sobre los 151 Pokémon de la región de Kanto para convertirte ¡en el mejor entrenador Pokémon!</p>
-        
-
-        <div id="go">¡GO!
-      </div>
+        <div id="textContainer1">
+          <h1 id="title1">Bienvenid@s a</h1>
+          <h1 id="title2">POKEKANTO</h1>
+          <p id="text1">Aquí podrás encontrar información sobre los 151 Pokémon de la región de Kanto.
+          <br>En el menú hay más contenido disponible para complementar tu aventura. 
+          <strong><br>¡Conviérte en el mejor entrenador Pokémon!</strong> </p>
+          <div id="go">¡GO!
+          </div>
+        </div>
     </section>
 
-    <!--SCREEN2-->
+<!--SCREEN2-->
 		<section class="screenBack" id="screen2">
       
       <div class="textContainer">
-        <img id="iconTitle" src="http://imgfz.com/i/60giOSx.png">
-        <div id="contTextTitle">
-				<h1 id="title4">POKÉDEX</h1>
-        <p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
-      </div>
+        <img class="iconTitle" src="http://imgfz.com/i/60giOSx.png">
+          <div class="contTextTitle">
+				<h1 class="title4">POKÉDEX</h1>
+        <p class="text2">Filtra los Pokémon por tipo, ordénalos y ¡Atrápalos a todos!</p>
+          </div>
       </div>
 
-      
-
-      <div id="containerFilters" class="containerFilters">
+      <div class="containerFilters">
         <div class="filters">
           <select class="filter" name="" id="filterType">
             <option value="allType" id="type">Tipo</option>
@@ -67,136 +65,98 @@
             <option value="Poison">Veneno</option>
             <option value="Flying">Volador</option>
             
-        </select> 
-        </div><!--filters-->
-        <div class="filters">
+          </select> 
+        </div>
+       <div class="filters">
           <select class="filter" name="" id="dropDown" >
             <option value="upward">Ordenar</option>
             <option value="upward">Nº Ascendente</option>
             <option value="falling">Nº Descendente</option>
-            <option value="sortAz">A-Z</option>
-            <option value="sortZa">Z-A</option>
-        </select> 
-        
-        </div><!--filters-->
-      </div><!--containerFilters-->
-     
-    <!--aqui se imprime-->
-    
-    <div class="containerDown">
-      <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
+          </select> 
+        </div>
       </div>
-
-       <div id="root">
-        
-       </div>
-
+     
+<!--IMPRIMER DATA-->
+      <div class="containerDown">
+        <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
+      </div>
+      <div id="root"></div>
       <div class="containerUp">
         <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
-        </div>
-      
-     
-
+      </div>
     </section>
 
-
-
-    <!--SCREEN3-->
+<!--SCREEN3-->
     <section class="screenBack" id="screen3">
 
       <div class="textContainer">
-        <img id="iconTitle" src="http://imgfz.com/i/cfJOiD5.png">
-        <div id="contTextTitle">
-				<h1 id="title4">CARAMELOS</h1>
-        <p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
-      </div>
-      </div>
-
-      
-
-
-   
-          <div id="containerFilters" class="containerFilters">
-            <div class="filters">
-              <select class="filter" id="selectPokeCandy">
-                <option value="allCandy" selected>Caramelos</option>
-                <option value="12">12</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-                <option value="400">400</option>
-              </select>
-            </div><!--filters-->
-          </div><!--containerFilters-->
-
-
-          <div class="containerDown">
-            <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
-            </div>
-
-        <div id="rootCandy"></div>
-
-       
-    
-        <div class="containerUp">
-          <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
+        <img class="iconTitle" src="http://imgfz.com/i/cfJOiD5.png">
+          <div class="contTextTitle">
+				<h1 class="title4">CARAMELOS</h1>
+        <p class="text2">Evolucionar tus Pokémon será mucho más fácil si recuerdas cuántos caramelos necesitan. Agrúpalos por cantidad:</p>
           </div>
+      </div>
 
-      </section>
-        <!--SCREEN4-->
+      <div class="containerFilters">
+        <div class="filters">
+          <select class="filter" id="selectPokeCandy">
+            <option value="allCandy" selected>Caramelos</option>
+            <option value="12">12</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="400">400</option>
+          </select>
+        </div>
+      </div>
 
+      <div class="containerDown">
+        <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
+      </div>
+      <div id="rootCandy"></div>
+      <div class="containerUp">
+        <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
+      </div>
 
+    </section>
 
+<!--SCREEN4-->
 
-
-        
-    
-        
-
-
-
-
-    
-     <section class="screenBack" id="screen4">
+    <section class="screenBack" id="screen4">
 
       <div class="textContainer">
-        <img id="iconTitle" src="http://imgfz.com/i/mSLNufh.png">
-        <div id="contTextTitle">
-				<h1 id="title4">HUEVOS</h1>
-        <p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
-      </div>
-      </div>
-    
-     
-    <div id="containerFilters" class="containerFilters">
-      <div class="filters">
-        <select class="filter" id="selectPokeEgg">
-          <option value="allEggs" selected>Huevos</option>
-          <option value="2 km">2km</option>
-          <option value="5 km">5km</option>
-          <option value="10 km">10km</option>
-        </select>
-      </div><!--filters-->
-    </div><!--containerFilters-->
-
-
-    <div class="containerDown">
-      <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
-      </div>
-
-    <div id="rootEggs"></div>
-
-    <div class="containerUp">
-      <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
+        <img class="iconTitle" src="http://imgfz.com/i/mSLNufh.png">
+          <div class="contTextTitle">
+				<h1 class="title4">HUEVOS</h1>
+        <p class="text2">Cada huevo tiene un grupo de Pokémon posibles a eclosionar, fíltralos por KM y siempre sabrás que incubar.</p>
+        </div>
       </div>
      
+      <div class="containerFilters">
+        <div class="filters">
+          <select class="filter" id="selectPokeEgg">
+            <option value="allEggs" selected>Huevos</option>
+            <option value="2 km">2km</option>
+            <option value="5 km">5km</option>
+            <option value="10 km">10km</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="containerDown">
+        <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
+      </div>
+      <div id="rootEggs"></div>
+      <div class="containerUp">
+        <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
+      </div>
 
     </section>
 
     <footer id="footer">
-      <a id="test" href=https://forms.gle/PFdK6d321wQkQ2a66 target=”_blank” > Ayúdanos a mejorar</a> 
-      <p>© 2020 Paulina & Alejandra</p>
-      </footer>   
+      <a id="test" href="https://forms.gle/PFdK6d321wQkQ2a66" > Ayúdanos a mejorar</a> 
+      <p>© 2020 Pauli & Alejandra</p>
+    </footer>   
    
 <script src="main.js" type="module"></script>  
 
