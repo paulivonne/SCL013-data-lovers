@@ -42,13 +42,13 @@ export const filterPokeOrder = (arr, condition) => {//se declara const que tendr
 
 
 //BUSCADOR
-
+/*
 export const searchPoke = (pokedata, searchName)=>{//se declara constante con función de buscar pokemon
   const findPoke = pokedata.filter((pokemon) => {//se declara constante de la data filtrada (desde toda la data)
   return pokemon.name.includes(searchName);//retorna (desde toda la data) el nombre incluyendo ?? 
  });
  return findPoke; //Busqueda terminada
-};
+};*/
 
 
 

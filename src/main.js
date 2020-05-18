@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterPokeType, filterPokeOrder,  filterEgg, filterCandy, searchPoke
+import { filterPokeType, filterPokeOrder,  filterEgg, filterCandy, 
   } from './data.js';
 
 
@@ -8,58 +8,22 @@ import { filterPokeType, filterPokeOrder,  filterEgg, filterCandy, searchPoke
 
 
 
-/*________HEADER_________*/
-//BUSCADOR
+  document.getElementById("screen2").style.display="none";
+  document.getElementById("screen3").style.display="none";
+  document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="none";
 
-document.getElementById('searchIcon').addEventListener('click', () => {
-  document.getElementById('root').innerHTML = "";
-  const searchInput = document.getElementById('searchBar').value;
-  document.getElementById("searchBar").value = "";
-  const searchName = searchInput.charAt(0).toUpperCase() + searchInput.slice(1).toLowerCase();
-  let inputName = searchPoke(pokedata,searchName);
-
-    for (let i = 0; i <inputName.length; i++){
-       document.getElementById('root').innerHTML += ``;
-       showPokedexSearch(inputName);
-  }
+//GO(MENÚ) DIRIGE SCREEN2
+document.getElementById("go").addEventListener("click", ()=>{
+  document.getElementById("screen2").style.display="block";
+  document.getElementById("screen2").style.display="";
+  document.getElementById("screen1").style.display="none";
+  document.getElementById("screen3").style.display="none";
+  document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="block";
 });
 
 
-//IMPRIME BUSQUEDA EN HTML
-function showPokedexSearch (pokedata){  
-  let pokeCardSearch = "";                                  
-  for (let i = 0; i < pokedata.length; i++){          
-    pokeCardSearch +=`
-      <div class="pokemon">
-        <h1 class="namePoke">${pokedata[i].name}</h1>
-        <p class="numPoke">${pokedata[i].num}</p>
-        <p class="numPoke">${pokedata[i].egg}</p>
-        <p class="numPoke">${pokedata[i].candy_count}</p>
-        <img class="imgPoke" src="${pokedata[i].img}">
-        <div id="typeCont">
-        <p class="typePoke">${(pokedata[i].type).innerHTML = trad(pokedata[i].type)}</p>
-        </div>
-      </div>`;
-}
-printPokedex.innerHTML = pokeCardSearch;  
-}
-showPokedexSearch(pokedata);
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("screen2").style.display="none";
-  document.getElementById("screen3").style.display="none";
-  document.getElementById("screen4").style.display="none";
 //INICIO(MENÚ) DIRIGE SCREEN1
 document.getElementById("menu1").addEventListener("click", ()=>{
   document.getElementById("screen1").style.display="block";
@@ -76,6 +40,7 @@ document.getElementById("menu2").addEventListener("click", ()=>{
   document.getElementById("screen1").style.display="none";
   document.getElementById("screen3").style.display="none";
   document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="block";
  
 });
 
@@ -87,12 +52,15 @@ function showPokedex (pokedata){
   let pokeCard = "";                                  
   for (let i = 0; i < pokedata.length; i++){          
     pokeCard +=`
-      <div class="pokemon">
-        <h1 class="namePoke">${pokedata[i].name}</h1>
-        <p class="numPoke">${pokedata[i].num}</p>
-        <img class="imgPoke" src="${pokedata[i].img}">
+      <div id="pokemon">
+        <h1 id="namePoke">${pokedata[i].name}
+        <p id="numPoke">${pokedata[i].num}<br>
+        <img id="imgPoke" src="${pokedata[i].img}"></p></h1>
+        
+        
         <div id="typeCont">
-        <p class="typePoke">${(pokedata[i].type).innerHTML = trad(pokedata[i].type)}</p>
+        <h1 class=typeTitle>TIPO</h1>
+        <p id="typePoke">${(pokedata[i].type).innerHTML = trad(pokedata[i].type)}</p>
         </div>
       </div>`;
 }
@@ -117,6 +85,7 @@ function pokemonFilter (pokedataFilter){
     });
     }
    pokemonFilter(pokedataFilter);
+   
    
 
 //_________________________________________________________
@@ -149,6 +118,7 @@ document.getElementById("menu3").addEventListener("click", ()=>{
   document.getElementById("screen1").style.display="none";
   document.getElementById("screen2").style.display="none";
   document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="block";
 });
 
 
@@ -162,10 +132,10 @@ function showPokedexCandy (pokedata){
       <div class="pokemonCandy">
         <div class="nameCandy">
 
-        <img class="imgPoke" src="${pokedata[i].img}"><strong>${pokedata[i].name}</strong></div>
-        <p class="numCandy">Nº:<strong>${pokedata[i].num}</strong></p>
-        <p class="candyPoke">Caramelos:<strong>${tradCandy(pokedata[i].candy_count)}</strong></p>
-        <p class="evolution">Evolución:<strong>${pokedata[i].next_evolution ? pokedata[i].next_evolution[0].name : "No tiene"}</strong></p>
+        <img class="imgPokeCandy" src="${pokedata[i].img}"><strong>${pokedata[i].name}</strong></div>
+        <p class="numCandy"><strong>Nº:</strong>${pokedata[i].num}</p>
+        <p class="candyPoke"><img id="candy"src="http://imgfz.com/i/cfJOiD5.png">${tradCandy(pokedata[i].candy_count)}</p>
+        <p class="evolution"><strong>Evolución:</strong>${pokedata[i].next_evolution ? pokedata[i].next_evolution[0].name : "No tiene"}</p>
       </div>
       `;
 }
@@ -195,7 +165,7 @@ function pokemonCandy (pokedata){
 // FUNCIÓN TRADUCIR CARAMELOS
     function tradCandy(pokedata){
     if (pokedata == "12"){
-    return "12"
+    return "12 "
     }else if (pokedata == "25"){
     return "25"
     }else if (pokedata == "50"){
@@ -230,6 +200,7 @@ document.getElementById("menu4").addEventListener("click", ()=>{
   document.getElementById("screen1").style.display="none";
   document.getElementById("screen2").style.display="none";
   document.getElementById("screen3").style.display="none";
+  document.getElementById("footer").style.display="block";
 });
 
 //DATA EGGS
@@ -239,11 +210,14 @@ function showPokedexEggs (pokedata){
   let pokeCardEgg = "";                                  
   for (let i = 0; i < pokedata.length; i++){          
     pokeCardEgg +=`
-      <div class="pokemon">
-        <h1 class="namePoke">${pokedata[i].name}</h1>
-        <p class="numPoke">${pokedata[i].num}</p>
-        <img class="imgPoke" src="${pokedata[i].img}">
-        <p>${tradEggs(pokedata[i].egg)}</p>
+      <div id="pokemonEgg">
+      <h1 id="namePokeEgg">${pokedata[i].name}
+      <p id="numPokeEgg">${pokedata[i].num}</p>
+      <img src="${pokedata[i].img}"></h1>
+      <div>
+      <img id="egg"src="http://imgfz.com/i/mSLNufh.png">
+      <p id="eggPoke">${tradEggs(pokedata[i].egg)}</p>
+      </div>
         
       </div>`;
 
@@ -281,7 +255,7 @@ function pokemonEggs (pokedataEggs){
     }else if (pokedataEggs == "10 km"){
     return "10 km"
     }else{
-    return "No aparece en huevos"
+    return "No aparece<br>en huevos"
     }
     }
 
@@ -330,4 +304,3 @@ function pokemonEggs (pokedataEggs){
     }
 
    
-

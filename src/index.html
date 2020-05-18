@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
  
     <header>
       <div id="menu">
@@ -20,24 +20,32 @@
 
 <!--SCREEN1-->
 		<section id="screen1">
+    
+
+      
       <div id="imgContainer"><img src="http://imgfz.com/i/R7eDH3b.png"></div>
       <div id="textContainer1">
 				<h1 id="title1">Bienvenid@s a</h1>
         <h1 id="title2">POKEKANTO</h1>
         <p id="text1">Aquí podrás encontrar la información sobre los 151 Pokémon de la región de Kanto para convertirte ¡en el mejor entrenador Pokémon!</p>
-        <h1 id="title3">ELIGE UNA CATEGORÍA</h1>
+        
 
-        <div id="categories">
+        <div id="go">¡GO!
       </div>
     </section>
 
     <!--SCREEN2-->
 		<section class="screenBack" id="screen2">
-     
-		<div class="textContainer">
+      
+      <div class="textContainer">
+        <img id="iconTitle" src="http://imgfz.com/i/60giOSx.png">
+        <div id="contTextTitle">
 				<h1 id="title4">POKÉDEX</h1>
-				<p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
+        <p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
       </div>
+      </div>
+
+      
 
       <div id="containerFilters" class="containerFilters">
         <div class="filters">
@@ -71,30 +79,42 @@
         </select> 
         
         </div><!--filters-->
-        
-       <div id="searchContainer">
-          <div id="contenedorInput">
-          <input type="text" id="searchBar" placeholder="Busca a tu Pokémon">
-        </div>
-          <div id="searchIcon">
-            <img src="http://imgfz.com/i/KNxmd9V.png">
-          </div>
-        </div>
-
       </div><!--containerFilters-->
      
     <!--aqui se imprime-->
-    <div id="root"></div>
+    
+    <div class="containerDown">
+      <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
+      </div>
+
+       <div id="root">
+        
+       </div>
+
+      <div class="containerUp">
+        <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
+        </div>
+      
+     
+
     </section>
 
 
 
     <!--SCREEN3-->
     <section class="screenBack" id="screen3">
+
       <div class="textContainer">
+        <img id="iconTitle" src="http://imgfz.com/i/cfJOiD5.png">
+        <div id="contTextTitle">
 				<h1 id="title4">CARAMELOS</h1>
-				<p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
+        <p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
       </div>
+      </div>
+
+      
+
+
    
           <div id="containerFilters" class="containerFilters">
             <div class="filters">
@@ -109,7 +129,18 @@
             </div><!--filters-->
           </div><!--containerFilters-->
 
+
+          <div class="containerDown">
+            <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
+            </div>
+
         <div id="rootCandy"></div>
+
+       
+    
+        <div class="containerUp">
+          <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
+          </div>
 
       </section>
         <!--SCREEN4-->
@@ -118,18 +149,25 @@
 
 
 
-
+        
+    
+        
 
 
 
 
     
      <section class="screenBack" id="screen4">
-      <div class="textContainer">
-				<h1 id="title4">HUEVOS</h1>
-				<p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
-     
 
+      <div class="textContainer">
+        <img id="iconTitle" src="http://imgfz.com/i/mSLNufh.png">
+        <div id="contTextTitle">
+				<h1 id="title4">HUEVOS</h1>
+        <p id="text2">Selecciona, filtra y descubre las principales características de tu pokémon.</p>
+      </div>
+      </div>
+    
+     
     <div id="containerFilters" class="containerFilters">
       <div class="filters">
         <select class="filter" id="selectPokeEgg">
@@ -142,11 +180,21 @@
     </div><!--containerFilters-->
 
 
+    <div class="containerDown">
+      <a href="#footer" class="down"><img src="http://imgfz.com/i/k49WVdT.png"/></a>
+      </div>
+
     <div id="rootEggs"></div>
+
+    <div class="containerUp">
+      <a href="#body" class="up"><img src="http://imgfz.com/i/YFfgWuZ.png"/></a>
+      </div>
+     
+
     </section>
 
     <footer id="footer">
-      <a href=https://forms.gle/PFdK6d321wQkQ2a66 target=”_blank” id="encuesta"> Ayúdanos a mejorar</a> 
+      <a id="test" href=https://forms.gle/PFdK6d321wQkQ2a66 target=”_blank” > Ayúdanos a mejorar</a> 
       <p>© 2020 Paulina & Alejandra</p>
       </footer>   
    
