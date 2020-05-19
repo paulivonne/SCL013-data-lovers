@@ -124,9 +124,6 @@ const arrData = [
       expect(filterPokeOrder(arrData,"num")).toEqual(arrData.reverse());
     }); 
 
-    /*test('returns 1-151', () => {//ordenar por defecto
-      expect(filterPokeOrder(arrData,"num")).toEqual(arrData);
-    });*/
   });
 
 
