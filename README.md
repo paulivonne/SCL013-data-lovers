@@ -31,6 +31,8 @@ El proceso de diseño consistió en realizar una investigación sobre la identid
 
 ### Página web
 
+Ingresa al [Link de POKEKANTO](https://alekristen.github.io/SCL013-data-lovers/src/index.html)
+
 ![imgalta1](http://imgfz.com/i/vZzHTYL.png)
 ![imgalta2](http://imgfz.com/i/A0P1D34.png)
 ![imgalta3](http://imgfz.com/i/oa43PMy.png)
