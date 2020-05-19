@@ -4,26 +4,30 @@
 	box-sizing: border-box;
   font-family: 'Montserrat';
 }
-
 a{
   text-decoration: none;
   color:white;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body{
     font-size:16px;
+    background:#25BF88;
   }
 
+/*_____________________________________*/
 /*SCREEN1*/
-  #screen1{
-    background:url(http://imgfz.com/i/lQEs3Vq.png);
-    background-position: center;
-    background-attachment: contain;
-    background-size: cover;
-    display: flex;
-    padding-top:100px;
-    height: 100vh;
-	}
+
+    #screen1{
+      background:url(http://imgfz.com/i/lQEs3Vq.png);
+      background-position: center;
+      background-attachment: contain;
+      background-size: cover;
+      display: flex;
+      padding-top:100px;
+      height: 100vh;
+    }
 
 	    #imgContainer{
       width:46%;
@@ -38,100 +42,76 @@ body{
         }
 
 		  #textContainer1{
-		  /*	background: #f07b3f;*/
         color:white;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        width:50%;
+        width:45%;
         padding:3%;
       }
  
-      #title1{/*bienvenidos*/
+      #title1{
         font-size: 1.25em;
         font-weight: normal;
         text-transform: uppercase;
       }
 
-      #title2{/*pokekanto*/
+      #title2{
         font-size: 3.1em;
         font-weight: 900;
       }
 
       #text1{
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: normal;
         width: 100%;
         max-width:90%;
         padding-top: 1.25rem;
       }
 
-      #title3{/*categorias*/
-        font-size: 1.1em;
-        font-weight: bold;
-        padding-top: 3rem;
-      }
-
-     	#categories {
-       /* background: #ffd460;*/
-        padding-top: 1rem;
-			}
-
-	    .category1 {
-				/*background: #856c8b;*/
+      #go{
+        margin-top: 3rem;
+        border-radius:18px;
+        width:100px;
+        height:37px;
         display: flex;
-        flex:1 1 auto;
+        justify-content: center;
         align-items: center;
-        justify-content: flex-start;
-      }
-      
-      .icon{
-        /*background: #ffd460;*/
-        display:flex;
-        margin: 0px;
-        padding-top: 1.25rem;
+        margin-bottom:30px;
+        font-size:17px;
+        font-weight: 600;
+        border:0.2em solid rgba(255, 255, 255, 0.995);
+        cursor:pointer;
       }
 
-      .icon img{
-
-        width: 70%;
-        height: 70%;
+      #go:hover{
+        border:0.2em solid #10FF90;
+        background: white;
+        font-weight: 900;
+        color:#2BBA99;
+        cursor:pointer;
       }
-
-      .textIcon {
-        color: white;
-        font-size: 0.9em;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-left: 0.7rem;
-        padding-top: 1.25rem;
-        cursor: pointer;
-
-      }
-
-      .textIcon:hover {
-        color: rgb(16, 255, 144);
-      }
-
-    
- /*SCREEN 2*/
+   
+/*_____________________________________*/
+/*SCREEN2*/
  
 	.screenBack{
-		background: linear-gradient(360deg, #25BF88 0%, #0097A5 70.31%);
 		display: flex;
     color:white;
     flex-direction:column;
     padding:0 4rem 0 4rem;
-    
-	}
+  }
+  
+  #screen2{
+    background:linear-gradient(360deg, #25BF88 0%, #0097A5 70.31%);
+  }
 
       header{
-       background-color:rgb(1, 146, 159);
-       width:100%;
-       color:white;
+        background-color:rgb(1, 146, 159);
+        width:100%;
+        color:white;
         display: flex;
         flex-flow: row nowrap;
-        max-width:81.3rem;
         height: 4.3rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -139,7 +119,6 @@ body{
       }
  
       #menu{
-       /*background:rgb(140, 215, 210);*/
         font-size:0.8em;
         width: 100%;
         display: flex;
@@ -147,7 +126,6 @@ body{
         align-items: center;
         padding-left:50px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.125);
-       
       }
 
       .menuH {
@@ -158,83 +136,46 @@ body{
       .menuH:hover{
         color: #10ff90;
         font-size: 1.5em;
-
       }
-
-      #searchContainer{
-        /*background:rgb(208, 215, 134);*/
-        display:flex;
-        align-items:flex-end;
-        width:35%;
-        justify-content: flex-end;
-        height:35px;
-       
-      }
-
-      
-   
-      #searchContainer input{
-        height: 2.7em;
-        width: 19em;
-        border-radius:1.6em;
-        background: rgba(255, 255, 255, 0.392);
-        color:white;
-        font-size: 12px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
-        margin-right: 10px;
-        
-      } 
-
-      *::-webkit-input-placeholder {
-        color:rgb(255, 255, 255);
-        font-style: italic;
-        font-size: 0.9em;
-        font-weight: 600;
-        text-align: center;
-      }
-
-      #searchIcon{
-       /*background:red;*/
-        cursor: pointer;
-        margin:0 0 0 0; 
-      }
-
-     #searchIcon img{
-       width:20px;
-     }
-
-     
 
       .textContainer{
-          /*background: #35495e;*/
-          padding:150px 0 4% 0;
-          display: flex;
-          flex-flow: column wrap;
-          width:100%;
-        
+        padding:120px 0 4% 0;
+        display: flex;
+        flex-flow: row wrap;
+        width:100%;
         }
 
-      .categoryTitle{
-        font-size:2.2em;
+      .iconTitle{
+        width:80px;
+        height:80px;
+        margin-top:20px;
       }
 
-      .text2{/*texto pokedex*/
-       margin-top:1.5rem;
-       font-size: 0.9em;
-      
+      .contTextTitle{
+         width:60%;
+         padding-left:15px;
+       }
+
+      .title4{
+        margin-top:1.2rem;
+        font-size: 2.5em;
+        margin-right:2px;
+       }
+
+      .text2{
+       font-size: 1em;
+       margin-top:13px;
       }
 
       .containerFilters{
-       /*background: rosybrown;*/
+        margin-top:20px;
         display:flex;
         width:70%;
         text-transform: uppercase;
         flex-wrap:wrap;
        }
 
-      .filters{/*borde filtros*/
+      .filters{
         margin: 0 2rem 0 0;
         border-radius:1.8em;
         display:inline-block;
@@ -243,7 +184,6 @@ body{
         width: 10rem;
         cursor: pointer;
         text-align:center;
-        
       }
 
       .filter{
@@ -259,12 +199,50 @@ body{
         font-weight: bold;
         text-transform: uppercase;
       }
-
+      
+      .containerDown{
+        display:flex;
+        justify-content: flex-end;
+        width:100%;
+      }
+    
+      .down img{
+        width:50%;
+      }
+    
+      .down{
+        margin-right:0;
+        display:flex;
+        justify-content: flex-end;
+      }
+    
+      .down img:hover{
+        background: url(http://imgfz.com/i/ai2O7Yh.png);
+        background-repeat:no-repeat;
+      }
+     
+      .containerUp{
+         display:flex;
+         justify-content: flex-end;
+         width:100%;
+      } 
+    
+      .up img{
+        width:50%;
+      }
+    
+      .up{
+        margin-right:0;
+        display:flex;
+        justify-content: flex-end;
+      }
+      
+      .up img:hover{
+        background: url(http://imgfz.com/i/cN9naVh.png);
+        background-repeat:no-repeat;
+      }
 
       #root{
-
-       /*background: #1ca4ff;*/
-        margin-top: 2rem;
         display: flex;
         justify-content:space-evenly;
         flex-wrap:wrap; 
@@ -272,246 +250,238 @@ body{
         padding-bottom:4rem;
         }
 
-        #rootStats{
-
-          /*background: #1ca4ff;*/
-           margin-top: 2rem;
-           display: flex;
-           justify-content:space-evenly;
-           flex-wrap:wrap; 
-           justify-content: center;
-           padding-bottom:4rem;
-           }
-
-
-      .pokemon{
-        width: 11.3em;
-        height: 16em; 
+      #pokemon{
+        width: 14em;
+        height: 17em; 
         box-sizing: border-box;
         border-radius: 1.5em;
         margin:1.2em;
-        background: rgba(255, 255, 255, 0.374);
-        color: #2BBA99;
+        background: linear-gradient(90deg, #109DAB -5.26%, #2BBA99 95.96%);
+        color: #0097A5 ;
         font-weight: bold;
         text-align:center;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.183);
-      
+        display: flex;
+        flex-flow: column wrap;
       }
 
-        
-      .imgPoke{
-        width:60%;
-      }
-
-     .namePoke{ /*nombre pokemon*/
+      #namePoke{ 
         background: white;
-        border-radius: 1.5rem 1.5rem 0 0;
-        padding: 0.4em;
+        border-radius: 1.4rem 1.4rem 0 0;
+        padding: 0.4em 0.4em 0 0.4em;
         font-size:1.1rem;
+        height:200px;
+        width: 100%;
       }
 
-      .numPoke{/*numero pokemon*/
-        color: white;
-        font-weight: bold;
+      #numPoke{
+        color: #0097A5 ;
+        font-weight: normal;
         margin:0.4rem;
         font-size:1rem;
-        
-      }
-      .typePoke{/*numero pokemon*/
-        color: white;
-        font-size:9px;
-        font-weight:bold;
-        margin-top:20px;
-        font-size:1rem;
-        background:rgb(154, 145, 208);
       }
 
+      #imgPoke{
+        width:65%;
+      }
+
+      .typeTitle{
+        font-weight:900;
+        font-size:12px;
+        margin-bottom:10px;
+      }
+
+      #typePoke{
+        font-size:16px;
+        font-weight:bold;
+        margin-bottom: 4px;
+      }
+
+      #typeCont{
+        color: white;
+        margin-top:0px;
+      }
+
+/*_____________________________________*/
+/*SCREEN3*/
       
+      #screen3{
+        background: linear-gradient(360deg, #25BF88 0%, rgb(97, 120, 211) 70.31%); 
+      }
+      
+      #rootCandy{
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap:wrap; 
+        padding-bottom:4rem;
+      }
+
+      .pokemonCandy{
+        width: 70%;
+        height:150px;
+        box-sizing: border-box;
+        border-radius: 2em;
+        margin:1.2em;
+        background: rgba(255, 255, 255, 0.374);
+        color: rgb(97, 120, 211);
+        display:flex;
+        flex-flow:row wrap;
+        text-align:center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.183);
+      }
+
+      .imgPokeCandy{
+        width:45%;
+      }
+
+     .nameCandy{
+        width:30%;
+        background: white;
+        border-radius: 1.8em 0  0 1.8em;
+        font-size:1.1rem;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:center;
+        align-items:center;
+      }
+
+      .numCandy{
+        width:22.5%;
+        color: white;
+        font-size:1.1rem;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:center;
+        align-items:center;
+      }
+
+      .candyPoke{
+        width:22.5%;
+        color: white;
+        font-size:1.1rem;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:center;
+        align-items:center;
+        border-left: 3px solid rgba(122, 139, 216, 0.625);
+        border-right: 3px solid rgba(122, 139, 216, 0.625); 
+      }
+
+      .evolution{
+        width:22.5%;
+        font-size:1.1rem;
+        color: white;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:center;
+        align-items:center;
+      }
+
+      #candy{
+        width:23%;
+        margin-bottom: 8px;
+      }
+
+/*_____________________________________*/
+/*SCREEN4*/
+      
+    #screen4{
+        background: linear-gradient(360deg, #25BF88 0%, rgb(62, 149, 215) 70.31%);
+    }
 
       #rootEggs{
-        margin-top: 0;
         display: flex;
         justify-content:space-evenly;
         flex-wrap:wrap; 
         justify-content: center;
         margin-bottom:4rem;
         width:100%;
-      }
-
-
-
-      
-  
-
-      #textContainerPokedex{
-         /*background:rgb(220, 115, 115);*/
-        
-      }
-
-      #textContainerStats{
-        /*background:rgb(220, 115, 115);*/
-        margin-bottom: 8px;
-      }
-
-      #textContainerEggs{
-        /*background:rgb(220, 115, 115);*/
-        margin-bottom: 8px;
-      }
-      
-      #filterEggs{
-        /*background:rgb(182, 137, 210);*/
-        width:60%;
-        
-      }
-
-      .filterEggImg{
-        width:200px;
-        height:200px;
-      }
-
-
-      /*SCREEN4*/
-      #rootCandy{
-        margin-top: 2rem;
-        display: flex;
-        justify-content:space-evenly;
-        flex-wrap:wrap; 
         padding-bottom:4rem;
-}
-
-.pokemonCandy{
-        width: 70%;
+      }
+    
+      #pokemonEgg{
+        width: 200px;
+        height: 330px; 
         box-sizing: border-box;
-        border-radius: 1.5em;
+        border-radius: 4em;
         margin:1.2em;
-        background: rgba(255, 255, 255, 0.374);
-        color: #2BBA99;
-        display:flex;
-        flex-flow:row wrap;
+        background: rgba(255, 255, 255, 0.235);
+        color: rgb(62, 149, 215);
+        font-weight: bold;
         text-align:center;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.183);
-
-}
-
-.imgPoke{
-        width:50%;
-        /*background:rgb(112, 162, 167);*/
+      
       }
 
-     .nameCandy{ /*nombre pokemon*/
-        width:30%;
+      #numPokeEgg{
+        margin-top:10px;
+        color: rgb(62, 149, 215);
+        font-weight: normal;
+        font-size:1rem;
+      }
+
+      #namePokeEgg{
         background: white;
-        border-radius: 1.5em 0  0 1.5em;
+        border-radius: 3.8rem 3.8rem 0 0;
+        padding: 20px 0.4em 0 0.4em;
         font-size:1.1rem;
         display:flex;
         flex-flow:column wrap;
-        align-text:center;
-        justify-content:center;
-        align-items:center;
-        
+        align-content: center;
+        height:55%;
       }
 
-      .numCandy{/*numero pokemon*/
-        width:22.5%;
-        color: white;
-        font-size:1rem;
-        display:flex;
-        flex-flow:column wrap;
-        align-text:center;
-        justify-content:center;
-        align-items:center;
-        
-        
-      }
-      .candyPoke{/*numero pokemon*/
-        width:22.5%;
-        color: white;
-        font-size:1rem;
-        /*background:rgb(238, 238, 238);*/
-        display:flex;
-        flex-flow:column wrap;
-        align-text:center;
-        justify-content:center;
-        align-items:center;
-        border-left: thick solid #ffffff92;
+      #egg{
+        margin-top:15px;
+        width:30%;
       }
 
-      .evolution{
-        width:22.5%;
-        color: white;
-        /*background:rgb(238, 238, 238);*/
-        display:flex;
-        flex-flow:column wrap;
-        align-text:center;
-        justify-content:center;
-        align-items:center;
-        border-left: thick solid #ffffff92;
-
+      #namePokeEgg img{
+        width:50%;
       }
 
-
-
-
-
-
-
+      #eggPoke{
+        margin-top:10px;
+        color: rgb(255, 255, 255);
+        font-size:16px;
+        font-weight:bold;
+        height:32px;
+      }
+     
+/*_____________________________________*/
+/*FOOTER*/
 
       footer{
         background: #25BF88;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow:column wrap;
-        width:100%;
-        height: 120px;
+        text-align: center;
         color:white;
         font-size:0.75rem;
+        width:100%;
+        height: 150px;
       }
 
       footer p{
-        /*background: rgb(134, 202, 203);*/
-        margin-bottom:25px;
-        
+        margin-top:75px;
       }
 
-      #encuesta{
-        border-radius:15px;
-        width:200px;
-        height:35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      #test{
+        padding:10px;
+        margin-top: 3rem;
+        border-radius:21px;
+        width:250px;
+        height:40px;
         margin-bottom:30px;
-        font-size:15px;
+        font-size:17px;
         font-weight: 600;
         background: rgba(0, 151, 165, 0.516);
         border:0.1em solid rgba(109, 255, 211, 0.995);
-        
+        cursor:pointer;
       }
 
-      
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*____________________________________________________
-MEDIA*/
-@media (max-width:768px){
+     
+/*____________________________________________________*/
+/*MEDIA*/
+@media (max-width:800px){
 /*SCREEN1*/
   #imgContainer{
     display:none;
@@ -519,52 +489,43 @@ MEDIA*/
   #screen1{
     justify-content: center;
   }
-  #categories {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
   body{
     font-size:15px;
   }
 
+  #textContainer1{
+    width:65%;
+  }
 /*SCREEN2*/
-
-header{
+ .containerFilters{
   flex-flow: column wrap;
-  height:130px;
-}
-
-#menu{
+  justify-content: space-between;
   width:100%;
-  height: 50%;
-  justify-content:space-between;
+  align-items: center;
 }
 
-.menuH {
-  margin:0;
-  
- }
+ .filters{
+  margin: 0 0 2rem 0;
+}
 
-#searchContainer{
+ .evolution{
+  font-size:0.9rem;
+}
+
+.containerDown{
   width:100%;
-  justify-content:flex-start;
-  height: 50%;
+  height:100%;
 }
 
-.textContainer{
-   padding:13% 0 4% 0;
- }
- 
-
-.pokemon{
-  border-radius: 1.65em;
+.containerUp{
+   width:100%;
+   height:100%;
 }
 }
 
-
+/*__________________________________*/
 @media (max-width:520px){
-  /*SCREEN1*/
+/*SCREEN1*/
   body{
     font-size:15px;
   }
@@ -581,37 +542,96 @@ header{
     max-width: 100%;
     padding-top: 1.25rem;
   }
-
-  
-  /*SCREEN2*/
+/*SCREEN2*/
+  #menu{
+   font-size:0.5em;
+   width: 100%;
+   display: flex;
+   flex-wrap:wrap;
+   align-items: center;
+   padding-left:50px;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.125);
+ }
+ .menuH {
+  cursor: pointer;
+  margin-right:26px;
+ }
 	.screenBack{
     padding:0 2rem 0 2rem;
   }
-
+  .textContainer{
+    padding:30% 0 6% 0;
+  }
   .containerFilters{
     flex-flow: column wrap;
     justify-content: space-between;
     width:100%;
     align-items: center;
  }
- .filters{
- margin: 0 0 2rem 0;
+  .filters{
+    margin: 0 0 2rem 0;
  }
- #root{
-  margin-top: 0.3rem;
+  #root{
+    margin-top: 0.3rem;
+  }
+   .pokemonCandy{
+    width: 210px;
+    height: 19em;
+    display:flex;
+    flex-direction:column ;
+  }
+  .imgPokeCandy{
+    width:45%;
+  }
+ .nameCandy{ 
+    width:100%;
+    height: 35%;
+    border-radius: 1.8em 1.8em  0 0;
+    font-size:1rem;
+    padding:0 10px 0 4px;
+  }
+  .numCandy{
+    width:100%;
+    font-size:1rem;
+    text-align: center;
+    margin-top:10px;
+  }
+  .candyPoke{
+    margin-top:10px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    font-size:1rem;
+    border-left: 0;
+    border-right: 0;
+    border-top: 3px solid rgba(122, 139, 216, 0.625);
+    border-bottom: 3px solid rgba(122, 139, 216, 0.625); 
+  }
+  .evolution{
+    margin-top:10px;
+    width:100%;
+    font-size:1rem;
+  }
+  #candy{
+    width:10%;
+    margin:17px 10px 17px 8px;
+  }
+  .textContainer{
+    padding:120px 0 4% 0;
+    width:90%;
+    }
+  .iconTitle{
+    width:60px;
+    height:60px;
+  }
+  .contTextTitle{
+     width:80%;
+     padding-left:15px;
    }
-
-   .icon img{
-
-    width: 60%;
-    height: 60%;
+  .title4{
+    font-size: 2.2em;
+   }
+  .text2{
+   font-size: 0.9em;
   }
   }
-
-
-
-
-
-
-
-

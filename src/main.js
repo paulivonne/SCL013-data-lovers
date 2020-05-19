@@ -1,65 +1,28 @@
 import data from './data/pokemon/pokemon.js';
-import { filterPokeType, filterPokeOrder,  filterEgg, filterCandy, searchPoke
+import { filterPokeType, filterPokeOrder,  filterEgg, filterCandy, 
   } from './data.js';
 
 
-  const pokedata = data.pokemon; 
-  const printPokedex = document.getElementById("root");
+const pokedata = data.pokemon; 
+const printPokedex = document.getElementById("root");
 
+//SCREEN 1____________
 
-
-/*________HEADER_________*/
-//BUSCADOR
-
-document.getElementById('searchIcon').addEventListener('click', () => {
-  document.getElementById('root').innerHTML = "";
-  const searchInput = document.getElementById('searchBar').value;
-  document.getElementById("searchBar").value = "";
-  const searchName = searchInput.charAt(0).toUpperCase() + searchInput.slice(1).toLowerCase();
-  let inputName = searchPoke(pokedata,searchName);
-
-    for (let i = 0; i <inputName.length; i++){
-       document.getElementById('root').innerHTML += ``;
-       showPokedexSearch(inputName);
-  }
-});
-
-
-//IMPRIME BUSQUEDA EN HTML
-function showPokedexSearch (pokedata){  
-  let pokeCardSearch = "";                                  
-  for (let i = 0; i < pokedata.length; i++){          
-    pokeCardSearch +=`
-      <div class="pokemon">
-        <h1 class="namePoke">${pokedata[i].name}</h1>
-        <p class="numPoke">${pokedata[i].num}</p>
-        <p class="numPoke">${pokedata[i].egg}</p>
-        <p class="numPoke">${pokedata[i].candy_count}</p>
-        <img class="imgPoke" src="${pokedata[i].img}">
-        <div id="typeCont">
-        <p class="typePoke">${(pokedata[i].type).innerHTML = trad(pokedata[i].type)}</p>
-        </div>
-      </div>`;
-}
-printPokedex.innerHTML = pokeCardSearch;  
-}
-showPokedexSearch(pokedata);
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("screen2").style.display="none";
+  document.getElementById("screen2").style.display="none";
   document.getElementById("screen3").style.display="none";
   document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="none";
+
+//GO(MENÚ) DIRIGE SCREEN2
+document.getElementById("go").addEventListener("click", ()=>{
+  document.getElementById("screen2").style.display="block";
+  document.getElementById("screen2").style.display="";
+  document.getElementById("screen1").style.display="none";
+  document.getElementById("screen3").style.display="none";
+  document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="block";
+});
+
 //INICIO(MENÚ) DIRIGE SCREEN1
 document.getElementById("menu1").addEventListener("click", ()=>{
   document.getElementById("screen1").style.display="block";
@@ -69,30 +32,32 @@ document.getElementById("menu1").addEventListener("click", ()=>{
   document.getElementById("screen4").style.display="none";
   location.reload();
 });
-/*________SCREEN 2 POKÉDEX_________*/
+
+
+//SCREEN 2 POKÉDEX____________
 //POKÉDEX(MENÚ) DIRIGE SCREEN2
 document.getElementById("menu2").addEventListener("click", ()=>{
   document.getElementById("screen2").style.display="block";
   document.getElementById("screen1").style.display="none";
   document.getElementById("screen3").style.display="none";
   document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="block";
  
 });
-
-
-
 
 //IMPRIME POKEDEX EN HTML
 function showPokedex (pokedata){  
   let pokeCard = "";                                  
   for (let i = 0; i < pokedata.length; i++){          
     pokeCard +=`
-      <div class="pokemon">
-        <h1 class="namePoke">${pokedata[i].name}</h1>
-        <p class="numPoke">${pokedata[i].num}</p>
-        <img class="imgPoke" src="${pokedata[i].img}">
+      <div id="pokemon">
+        <h1 id="namePoke">${pokedata[i].name}
+        <p id="numPoke">${pokedata[i].num}<br>
+        <img id="imgPoke" src="${pokedata[i].img}"></p>
+        </h1>
         <div id="typeCont">
-        <p class="typePoke">${(pokedata[i].type).innerHTML = trad(pokedata[i].type)}</p>
+        <p id="typePoke"><h1 class=typeTitle>TIPO</h1>
+        ${(pokedata[i].type).innerHTML = trad(pokedata[i].type)}</p>
         </div>
       </div>`;
 }
@@ -100,7 +65,6 @@ printPokedex.innerHTML = pokeCard;
 }
 showPokedex(pokedata);
 
-//_________________________________________________________
 //FUNCIÓN FILTRAR POR TIPO
 const pokedataFilter = pokedata;
 const selectType = document.getElementById("filterType");
@@ -116,12 +80,9 @@ function pokemonFilter (pokedataFilter){
       }
     });
     }
-   pokemonFilter(pokedataFilter);
+  pokemonFilter(pokedataFilter);
    
-
-//_________________________________________________________
 //ORDENAR NÚMERO
-
 const pokedataOrder = pokedataFilter;
 const orderArray = document.querySelector('#dropDown');
 orderArray.addEventListener('change', () => {
@@ -131,29 +92,20 @@ orderArray.addEventListener('change', () => {
   let resultOrder = filterPokeType (pokedataOrder, typePoke);
 
   showPokedex(filterPokeOrder(resultOrder, orderSelect));
- 
 });
 
 
-
-
-
-
-
-
-
-/*________SCREEN 3 STATS_________*/
+//SCREEN 3 STATS________________
 //CARAMELOS(MENÚ) DIRIGE SCREEN3
 document.getElementById("menu3").addEventListener("click", ()=>{
   document.getElementById("screen3").style.display="block";
   document.getElementById("screen1").style.display="none";
   document.getElementById("screen2").style.display="none";
   document.getElementById("screen4").style.display="none";
+  document.getElementById("footer").style.display="block";
 });
 
-
 //DATA CARAMELOS
-
 const printPokedexCandy = document.getElementById("rootCandy");
 function showPokedexCandy (pokedata){ 
   let pokeCardCandy = "";                                  
@@ -161,11 +113,14 @@ function showPokedexCandy (pokedata){
     pokeCardCandy +=`
       <div class="pokemonCandy">
         <div class="nameCandy">
-
-        <img class="imgPoke" src="${pokedata[i].img}"><strong>${pokedata[i].name}</strong></div>
-        <p class="numCandy">Nº:<strong>${pokedata[i].num}</strong></p>
-        <p class="candyPoke">Caramelos:<strong>${tradCandy(pokedata[i].candy_count)}</strong></p>
-        <p class="evolution">Evolución:<strong>${pokedata[i].next_evolution ? pokedata[i].next_evolution[0].name : "No tiene"}</strong></p>
+        <img class="imgPokeCandy" src="${pokedata[i].img}">
+        <strong>${pokedata[i].name}</strong></div>
+        <p class="numCandy"><strong>Nº:</strong>${pokedata[i].num}</p>
+        <p class="candyPoke">
+        <img id="candy"src="http://imgfz.com/i/cfJOiD5.png">
+        ${tradCandy(pokedata[i].candy_count)}</p>
+        <p class="evolution"><strong>Evolución:</strong>
+        ${pokedata[i].next_evolution ? pokedata[i].next_evolution[0].name : "No tiene"}</p>
       </div>
       `;
 }
@@ -173,8 +128,7 @@ printPokedexCandy.innerHTML = pokeCardCandy;
 }
 showPokedexCandy(pokedata);
 
-
-// FUNCIÓN FILTRAR POR CARAMELOS
+//FUNCIÓN FILTRAR POR CARAMELOS
 const selectCandy = document.getElementById("selectPokeCandy");
 
 function pokemonCandy (pokedata){
@@ -189,71 +143,38 @@ function pokemonCandy (pokedata){
     });
     }
    pokemonCandy(pokedata);
-   console.log(showPokedexCandy);
 
-
-// FUNCIÓN TRADUCIR CARAMELOS
-    function tradCandy(pokedata){
-    if (pokedata == "12"){
-    return "12"
-    }else if (pokedata == "25"){
-    return "25"
-    }else if (pokedata == "50"){
-    return "50"
-    }else if (pokedata == "100"){
-    return "100"
-    }else if (pokedata == "400"){
-    return "400"
-    }else{
-    return "No tiene"
-    }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*________SCREEN 4 EGGS_________*/
+//SCREEN 4 EGGS______________
 //HUEVOS(MENÚ) DIRIGE SCREEN4
 document.getElementById("menu4").addEventListener("click", ()=>{
   document.getElementById("screen4").style.display="block";
   document.getElementById("screen1").style.display="none";
   document.getElementById("screen2").style.display="none";
   document.getElementById("screen3").style.display="none";
+  document.getElementById("footer").style.display="block";
 });
 
 //DATA EGGS
-
 const printPokedexEggs = document.getElementById("rootEggs");
 function showPokedexEggs (pokedata){ 
   let pokeCardEgg = "";                                  
   for (let i = 0; i < pokedata.length; i++){          
     pokeCardEgg +=`
-      <div class="pokemon">
-        <h1 class="namePoke">${pokedata[i].name}</h1>
-        <p class="numPoke">${pokedata[i].num}</p>
-        <img class="imgPoke" src="${pokedata[i].img}">
-        <p>${tradEggs(pokedata[i].egg)}</p>
-        
+      <div id="pokemonEgg">
+      <h1 id="namePokeEgg">${pokedata[i].name}
+      <p id="numPokeEgg">${pokedata[i].num}</p>
+      <img src="${pokedata[i].img}"></h1>
+      <div>
+      <img id="egg"src="http://imgfz.com/i/mSLNufh.png">
+      <p id="eggPoke">${tradEggs(pokedata[i].egg)}</p>
+      </div>
       </div>`;
 
 }
 printPokedexEggs.innerHTML = pokeCardEgg;  
 }
 showPokedexEggs(pokedata);
-console.log(showPokedexEggs)
 
-//_________________________________________________________
 // FUNCIÓN FILTRAR POR HUEVOS
 const pokedataEggs = pokedataOrder;
 const selectEggs = document.getElementById("selectPokeEgg");
@@ -271,8 +192,26 @@ function pokemonEggs (pokedataEggs){
     }
    pokemonEggs(pokedataEggs);
 
-//_________________________________________________________
-// FUNCIÓN TRADUCIR HUEVOS
+
+//FUNCIONES TRADUCIR________
+//FUNCIÓN TRADUCIR CARAMELOS
+function tradCandy(pokedata){
+  if (pokedata == "12"){
+  return "12 "
+  }else if (pokedata == "25"){
+  return "25"
+  }else if (pokedata == "50"){
+  return "50"
+  }else if (pokedata == "100"){
+  return "100"
+  }else if (pokedata == "400"){
+  return "400"
+  }else{
+  return "No tiene"
+  }
+  }
+
+//FUNCIÓN TRADUCIR HUEVOS
     function tradEggs(pokedataEggs){
     if (pokedataEggs == "2 km"){
     return "2 km"
@@ -281,14 +220,11 @@ function pokemonEggs (pokedataEggs){
     }else if (pokedataEggs == "10 km"){
     return "10 km"
     }else{
-    return "No aparece en huevos"
+    return "No aparece<br>en huevos"
     }
     }
 
-
-//_________________________________________________________
-// TRADUCCION TIPO
-
+//TRADUCCION TIPO
     function trad(pokeData){
       let spanish= [];
       for(let i=0; i<pokeData.length;i++){
@@ -330,4 +266,3 @@ function pokemonEggs (pokedataEggs){
     }
 
    
-
