@@ -1,9 +1,9 @@
 # POKEKANTO
 
+
 ## 1. Presentación del proyecto
 
 POKEKANTO tiene como propósito ser una guía complementaria que ayuda a reforzar la memoria del jugador para completar su Pokédex de la región de Kanto. Por lo tanto, el usuario son jugadores nivel medio de Pokémon Go, quienes ya tienen un acercamiento y conocimiento básico de esta aplicación y buscan información para perfeccionarse como entrenador Pokémon.
-
 
 ### Investigación inicial
 
@@ -14,7 +14,6 @@ Por lo tanto, decidimos tener en cuenta estas categorías para trabajar en nuest
 **• Pokédex:** Mostrar los 151 Pokémon de la región de kanto.
 
 **• Evolución:** Mostrar información de la data que ayude a evolucionar Pokémon.
-
 
 ### Concepto de idea y diseño
 
@@ -39,11 +38,28 @@ El proceso de diseño consistió en realizar una investigación sobre la identid
 
 ### Responsive
 
+Nuestro sitio web es adaptable a diferentes tamaños de pantallas. 
+Previsualiza en este [Link](https://scene.zeplin.io/project/5ec31efee16994494ce49e9b)
+
 ![imgalta1](http://imgfz.com/i/qiR1gBa.png)
 
 ### Zeplin
 
-[Proyecto en Zeplin](https://scene.zeplin.io/project/5ec31efee16994494ce49e9b)
+Visita nuestro [Proyecto en Zeplin](https://scene.zeplin.io/project/5ec31efee16994494ce49e9b)
+y encontrarás los detalles de diseño.
+
+### Testeos de usuario
+
+Realizamos un testeo de usuario para analizar su comportamiento e interacción con la página al asignarle tareas de navegación. 
+
+Los resultados nos arrojaron que la página tiene un 87% de usabilidad, por lo tanto es fácil y rápida de navegar.
+
+![imgmaze1](http://imgfz.com/i/IOWYmCd.png)
+![imgmaze1](http://imgfz.com/i/v7gbfJR.png)
+
+Accede a los [Resultados en Maze](https://maze.design/r/4m8lehkae7dxfp)
+
+Realiza nuestro [Test en Maze](https://scene.zeplin.io/project/5ec31efee16994494ce49e9b)
 
 
 ## 2. Prototipos
@@ -71,7 +87,6 @@ Añadimos mejoras y creamos el nuevo prototipo tomando en cuenta las historias d
 ![imgalta1](http://imgfz.com/i/X8E4AIU.png)
 ![imgalta2](http://imgfz.com/i/FeZgXfy.png)
 ![imgalta3](http://imgfz.com/i/2OTtW8N.png)
-
 
 ***
 
@@ -123,7 +138,6 @@ En el menú se encuentra la categoría "Caramelos" y por medio del filtro de hue
 
 Creamos una encuesta ubicada en el footer, donde el usuario podrá entregarnos su experiencia con el sitio y ayudarnos a mejorar.
 [Link](https://forms.gle/PFdK6d321wQkQ2a66)
-
 
 ***
 
@@ -187,7 +201,6 @@ Creamos una encuesta ubicada en el footer, donde el usuario podrá entregarnos s
 - [x] **Dar y recibir feedback** Escuchar los comentarios y críticas de los demás de manera respetuosa, y/o comunicar a los demás las opiniones de forma constructiva.
 
 - [x] **Comunicación eficaz** Comunicar ideas a los demás cuando es necesario, aunque no siempre se fomenten de manera proactiva estas instancias de comunicación.
-
 
 ***
 
