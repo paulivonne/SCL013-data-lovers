@@ -36,7 +36,7 @@ const arrData = [
     ]
   }]
 
-  const arrOrderAz = [
+ /* const arrOrderAz = [
     {"num": "001",
     "name": "Bulbasaur",
     "type": [
@@ -54,7 +54,7 @@ const arrData = [
       "Water"]
     }]
 
-    
+    */
     /*const arrOrderDes = [
       {"num": "007",
       "name": "Squirtle",
@@ -73,6 +73,7 @@ const arrData = [
         "Poison"]
       }]
       */
+      
       
 
       const arrEgg = [
@@ -114,13 +115,6 @@ const arrData = [
     test('is a function', () => {
       expect(typeof filterPokeOrder).toBe('function');
     });
-  
-    test('returns A-Z', () => {//A-Z
-      expect(filterPokeOrder(arrData,"name")).toEqual(arrData);
-    });
-    test('returns Z-A', () => {//Z-A
-      expect(filterPokeOrder(arrData,"name")).toEqual(arrOrderAz.reverse());
-    });
     
     test('returns 1-151', () => {//NºAscendente
       expect(filterPokeOrder(arrData,"num")).toEqual(arrData);
@@ -128,11 +122,11 @@ const arrData = [
 
     test('returns 151-1', () => {//NºDescendente
       expect(filterPokeOrder(arrData,"num")).toEqual(arrData.reverse());
-    });
+    }); 
 
-    test('returns 1-151', () => {//ordenar por defecto
+    /*test('returns 1-151', () => {//ordenar por defecto
       expect(filterPokeOrder(arrData,"num")).toEqual(arrData);
-    });
+    });*/
   });
 
 

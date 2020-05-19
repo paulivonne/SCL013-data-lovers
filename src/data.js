@@ -16,8 +16,10 @@ export const filterPokeOrder = (arr, condition) => {//se declara const que tendr
   let arrPokemon = [];//declara variable que contiene array
   if (condition === 'upward') {//si se selecciona opción Ascendente
     arrPokemon = arr.sort((a, b) => a.num - b.num);//la variable (toma num del array) = se ordenen de "a" a "b" (ordenUnicode)
+    
   } else  {//si se selecciona opción Descendente
-    arrPokemon = arr.sort((a, b) => b.num - a.num);//la variable (toma num del array) = se ordenen de "b" a "a" (ordenUnicode)
+   arrPokemon = arr.sort((a, b) => b.num - a.num);//la variable (toma num del array) = se ordenen de "b" a "a" (ordenUnicode)
+
   } 
   
   return arrPokemon;//retorna la variable con la condición aplicada

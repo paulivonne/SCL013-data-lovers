@@ -80,7 +80,7 @@ function pokemonFilter (pokedataFilter){
       }
     });
     }
-   pokemonFilter(pokedataFilter);
+  pokemonFilter(pokedataFilter);
    
 //ORDENAR NÚMERO
 const pokedataOrder = pokedataFilter;
