@@ -38,10 +38,14 @@ Ingresa al [Link de POKEKANTO](https://alekristen.github.io/SCL013-data-lovers/s
 ![imgalta3](http://imgfz.com/i/oa43PMy.png)
 ![imgalta4](http://imgfz.com/i/ySDcNO0.png)
 
+### Figma
+
+Visualiza nuestro proyecto en [Figma](https://www.figma.com/file/vcj81eM7hjG4QAIcRIsJwJ/Untitled?node-id=0%3A1)
+
 ### Responsive
 
 Nuestro sitio web es adaptable a diferentes tamaños de pantallas. 
-Previsualiza en este [Link](https://scene.zeplin.io/project/5ec31efee16994494ce49e9b)
+Previsualiza en este [Link](https://material.io/resources/resizer/#url=https%3A%2F%2Falekristen.github.io%2FSCL013-data-lovers%2Fsrc%2Findex.html%23body)
 
 ![imgalta1](http://imgfz.com/i/qiR1gBa.png)
 
@@ -54,10 +58,10 @@ y encontrarás los detalles de diseño.
 
 Realizamos un testeo de usuario para analizar su comportamiento e interacción con la página al asignarle tareas de navegación. 
 
-Los resultados nos arrojaron que la página tiene un 87% de usabilidad, por lo tanto es fácil y rápida de navegar.
+Los resultados nos arrojaron que la página tiene un 86% de usabilidad, por lo tanto es fácil y rápida de navegar.
 
-![imgmaze1](http://imgfz.com/i/IOWYmCd.png)
-![imgmaze1](http://imgfz.com/i/v7gbfJR.png)
+![imgmaze1](http://imgfz.com/i/C9NjYKD.png)
+![imgmaze1](http://imgfz.com/i/1gYEpcV.png)
 
 Accede a los [Resultados en Maze](https://maze.design/r/4m8lehkae7dxfp)
 
@@ -140,6 +144,10 @@ En el menú se encuentra la categoría "Caramelos" y por medio del filtro de hue
 
 Creamos una encuesta ubicada en el footer, donde el usuario podrá entregarnos su experiencia con el sitio y ayudarnos a mejorar.
 [Link](https://forms.gle/PFdK6d321wQkQ2a66)
+
+## Presentación en PPT
+
+Visita el [Link](https://docs.google.com/presentation/d/1U8v_JKJeG2vhiAXDM-3OVYgxpoejjW34o1asC-iHHDk/edit#slide=id.g6bb4ddd667_0_427) para ver la presentación del proyecto.
 
 ***
 
