@@ -65,7 +65,7 @@ Los resultados nos arrojaron que la página tiene un 86% de usabilidad, por lo t
 
 Accede a los [Resultados en Maze](https://maze.design/r/4m8lehkae7dxfp)
 
-Realiza nuestro [Test en Maze](https://scene.zeplin.io/project/5ec31efee16994494ce49e9b)
+Realiza nuestro [Test en Maze](https://t.maze.design/11768094)
 
 
 ## 2. Prototipos
@@ -220,7 +220,7 @@ Visita el [Link](https://docs.google.com/presentation/d/1U8v_JKJeG2vhiAXDM-3OVYg
 * [x] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
 * [x] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
 * [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [x] Incluye historias de usuario en `README.md`.
