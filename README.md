@@ -1,27 +1,25 @@
-# Data Lovers
+# POKEKANTO
 
-## 1. Presentación del proyecto: POKEKANTO
 
-El usuario son jugadores nivel medio de Pokémon Go, quienes ya tienen un acercamiento y conocimiento básico de esta aplicación y buscan información de los 151 pokémon de la región de Kanto para perfeccionarse como entrenador Pokémon.
+## 1. Presentación del proyecto
 
+POKEKANTO tiene como propósito ser una guía complementaria que ayuda a reforzar la memoria del jugador para completar su Pokédex de la región de Kanto. Por lo tanto, el usuario son jugadores nivel medio de Pokémon Go, quienes ya tienen un acercamiento y conocimiento básico de esta aplicación y buscan información para perfeccionarse como entrenador Pokémon.
 
 ### Investigación inicial
 
 Se realizó una búsqueda en facebook del grupo con mayores usuarios en Chile del juego Pókemon Go y gracias a la búsqueda por palabras identificamos los principales aspectos que se comentaban respecto a la región de Kanto.
-Como resultado encontramos que la mayoría busca completar su pokédex y tener pokémon con buenas estadísticas. Por lo tanto, decidimos tener 3 categorías principales en nuestra web:
+Como resultado encontramos que la mayoría busca completar su Pokédex y evolucionar. 
+Por lo tanto, decidimos tener en cuenta estas categorías para trabajar en nuestra web:
 
-**• Pokédex:** Mostrar los 151 pokémon de la región de kanto.
+**• Pokédex:** Mostrar los 151 Pokémon de la región de kanto.
 
-**• Estadísticas:** Mostrar información específica de mejores puntajes de cada pokémon.
-
-**• Crianza:** Mostrar información de caramelos para saber cúantos km recorrer con un pókemon compañero y poder tener su evolución.
-
+**• Evolución:** Mostrar información de la data que ayude a evolucionar Pokémon.
 
 ### Concepto de idea y diseño
 
 El proceso de diseño consistió en realizar una investigación sobre la identidad visual del juego, teniendo como resultado el primer prototipo de alta fidelidad, el cual fue testeado con algunos usuarios y gracias al feedback se aplicaron cambios que ayudaron a lograr la coherencia visual que se buscaba.
 
-![imgdesign](http://imgfz.com/i/B7rzis6.png)
+![imgdesign](http://imgfz.com/i/qV1PDYv.png)
 
 **Nombre “POKEKANTO”:** Este juego de palabras hace relación directa a la región de Kanto para que el usuario sepa del primer momento de qué se trata y lo recuerde fácilmente si desea volver a visitar la página.
 
@@ -30,6 +28,44 @@ El proceso de diseño consistió en realizar una investigación sobre la identid
 **Colores:** Se definió una paleta de colores para aplicar en toda la página y textos.
 
 **Tipografía:** Montserrat fue la familia elegida por ser sans serif de estructura geométrica y legible en todos los tamaños. Los cuerpos utilizados son Black para títulos, Bold para subtítulos y Regular en párrafos.
+
+### Página web
+
+Ingresa al [Link de POKEKANTO](https://alekristen.github.io/SCL013-data-lovers/src/index.html)
+
+![imgalta1](http://imgfz.com/i/vZzHTYL.png)
+![imgalta2](http://imgfz.com/i/A0P1D34.png)
+![imgalta3](http://imgfz.com/i/oa43PMy.png)
+![imgalta4](http://imgfz.com/i/ySDcNO0.png)
+
+### Figma
+
+Visualiza nuestro proyecto en [Figma](https://www.figma.com/file/vcj81eM7hjG4QAIcRIsJwJ/Untitled?node-id=0%3A1)
+
+### Responsive
+
+Nuestro sitio web es adaptable a diferentes tamaños de pantallas. 
+Previsualiza en este [Link](https://material.io/resources/resizer/#url=https%3A%2F%2Falekristen.github.io%2FSCL013-data-lovers%2Fsrc%2Findex.html%23body)
+
+![imgalta1](http://imgfz.com/i/qiR1gBa.png)
+
+### Zeplin
+
+Visita nuestro [Proyecto en Zeplin](https://scene.zeplin.io/project/5ec31efee16994494ce49e9b)
+y encontrarás los detalles de diseño.
+
+### Testeos de usuario
+
+Realizamos un testeo de usuario para analizar su comportamiento e interacción con la página al asignarle tareas de navegación. 
+
+Los resultados nos arrojaron que la página tiene un 86% de usabilidad, por lo tanto es fácil y rápida de navegar.
+
+![imgmaze1](http://imgfz.com/i/C9NjYKD.png)
+![imgmaze1](http://imgfz.com/i/1gYEpcV.png)
+
+Accede a los [Resultados en Maze](https://maze.design/r/4m8lehkae7dxfp)
+
+Realiza nuestro [Test en Maze](https://t.maze.design/11768094)
 
 
 ## 2. Prototipos
@@ -85,32 +121,33 @@ Por medio del botón “orden” el usuario podrá seleccionar si visualizará l
 
 ### Historia 4
 
-“Yo como jugador nivel medio de Pokémon Go quiero ordenar alfabéticamente los pokémon para reconocerlos por sus nombres más fácil a la vista" 
-
+“Yo como jugador nivel medio de Pokémon Go quiero llegar fácilmente al final y al principio de la página para visualizar los primeros y últimos Pokémon de la lista”
  
 **Criterios de aceptación:**
-Por medio del botón “orden” el usuario podrá seleccionar si visualizará los pokémon en orden alfabético de A-Z y de Z-A, funcionando en conjunto al filtro de tipo.
+Por medio de botones ubicados al lado superior e inferior de la lista el usuario puede llegar al inicio o al final sólo al hacer click.
 
 ### Historia 5
- 
-“Yo como jugador nivel medio de Pokémon Go quiero poder ver la información básica de un pókemon”
+
+“Yo como jugador nivel medio de Pokémon Go quiero ayuda para memorizar cuántos caramelos necesito para evolucionar Pokémon"
  
 **Criterios de aceptación:**
-Al hacer click sobre el pokémon que le interesa, se despliega un modal con su información básica, el cual podrá cerrar con una X en la esquina superior derecha para continuar navegando.
+En el menú se encuentra la categoría "Caramelos", haciendo click accede a una nueva pantalla donde verá todos los Pokémon y por medio del filtro de caramelos el usuario podrá agrupar la información que necesita clasificar.
 
 ### Historia 6
- 
-“Yo como jugador nivel medio de Pokémon Go quiero poder buscar un pokémon solamente sabiéndome su nombre y que aparezca”
+
+“Yo como jugador nivel medio de Pokémon Go quiero saber que Pokémon pueden eclosionar de los distintos huevos para saber cuáles poner en incubación"
  
 **Criterios de aceptación:**
-En el header al lado derecho está ubicado un buscador donde se puede ingresar el nombre de un pokémon y encontrarlo rápidamente en la pokédex.
+En el menú se encuentra la categoría "Caramelos" y por medio del filtro de huevos por Km el usuario podrá descubrir que grupo de Pokémon puede saber las opciones de Pokémon que tiene cada huevo.
 
 ## Feedback de usuario 
 
 Creamos una encuesta ubicada en el footer, donde el usuario podrá entregarnos su experiencia con el sitio y ayudarnos a mejorar.
+[Link](https://forms.gle/PFdK6d321wQkQ2a66)
 
-Link: https://forms.gle/PFdK6d321wQkQ2a66
+## Presentación en PPT
 
+Visita el [Link](https://docs.google.com/presentation/d/1U8v_JKJeG2vhiAXDM-3OVYgxpoejjW34o1asC-iHHDk/edit#slide=id.g6bb4ddd667_0_427) para ver la presentación del proyecto.
 
 ***
 
@@ -144,7 +181,7 @@ Link: https://forms.gle/PFdK6d321wQkQ2a66
 - [x] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
-- [ ] Testear funciones (funciones puras).
+- [x] Testear funciones (funciones puras).
 
 ### Git y GitHub
 - [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
@@ -163,7 +200,7 @@ Link: https://forms.gle/PFdK6d321wQkQ2a66
 
 - [x] **Autoaprendizaje** Demostrar interés y adquirir nuevos conocimientos autónomamente, estudiando de manera independiente, lo que se traduce, en que cuando es necesario, la estudiante buscará aclarar conceptos y resolver dudas sobre la materia.
 
-- [ ] **Presentaciones** Utilizar ciertas estrategias para hablar en público (tono y ritmo de voz adecuado, contacto visual con el público, interacción con medios de presentación), que permitan asegurar un mediano entendimiento de la audiencia.
+- [x] **Presentaciones** Utilizar ciertas estrategias para hablar en público (tono y ritmo de voz adecuado, contacto visual con el público, interacción con medios de presentación), que permitan asegurar un mediano entendimiento de la audiencia.
 
 - [x] **Adaptabilidad** Afrontar los cambios inesperados o nuevos desafíos con una actitud positiva, aunque no necesariamente se logre accionar o adaptarse de la mejor manera a los diferentes contextos.
 
@@ -175,16 +212,15 @@ Link: https://forms.gle/PFdK6d321wQkQ2a66
 
 - [x] **Comunicación eficaz** Comunicar ideas a los demás cuando es necesario, aunque no siempre se fomenten de manera proactiva estas instancias de comunicación.
 
-
 ***
 
 ## 9. Checklist
 
-* [ ] Usa VanillaJS.
+* [x] Usa VanillaJS.
 * [x] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [x] Pasa tests (`npm test`)
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
 * [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [x] Incluye historias de usuario en `README.md`.
@@ -192,7 +228,7 @@ Link: https://forms.gle/PFdK6d321wQkQ2a66
   `README.md`.
 * [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
+* [x] Incluye link a Zeplin en `README.md`.
 * [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
